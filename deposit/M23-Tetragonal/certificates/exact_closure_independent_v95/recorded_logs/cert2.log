@@ -1,0 +1,9 @@
+H1 A: deg_v = 21 <= 21, deg_t = 6 <= 6: PASS
+H1 B: seven-band caps (4,10,15,21|4,10,15): PASS (max |coeff| = 49 digits)
+H1 C: polynomial u-form, deg_t a_j = 42-2j exactly (top degrees [42,40,...,0]): PASS
+H1 D: all 15 forbidden odd-triangle slots vanish; 463/484 nonzero (6 incidental zeros beyond the triangle): PASS
+H2 A: deg_v = 21 <= 21, deg_t = 6 <= 6: PASS
+H2 B: seven-band caps (4,10,15,21|4,10,15): PASS (max |coeff| = 48 digits)
+H2 C: polynomial u-form, deg_t a_j = 42-2j exactly (top degrees [42,40,...,0]): PASS
+H2 D: all 15 forbidden odd-triangle slots vanish; 469/484 nonzero (0 incidental zeros beyond the triangle): PASS
+M23_PATCH_CERT2_PASS

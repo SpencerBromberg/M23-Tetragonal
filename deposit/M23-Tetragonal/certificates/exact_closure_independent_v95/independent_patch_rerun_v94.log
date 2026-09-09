@@ -1,0 +1,23 @@
+=== cert1_forbidden_triangle_lattice.py ===
+L1: 484 slots = 253 even + 231 odd: PASS
+L2: forbidden odd triangle {k odd, j>=16}: 15 slots, staircase (33,1)(35,2)(37,3)(39,4)(41,5): PASS  [pure lattice geometry]
+L3: q-pair space 469 = 253 + 216; law r>=18-j allows 130: PASS
+L4: seven-band law: 86 slots, counts (5,11,16,22|5,11,16), all within r>=18-j: PASS
+M23_PATCH_CERT1_PASS
+=== cert2_exact_adjoints_band_law.py ===
+H1 A: deg_v = 21 <= 21, deg_t = 6 <= 6: PASS
+H1 B: seven-band caps (4,10,15,21|4,10,15): PASS (max |coeff| = 49 digits)
+H1 C: polynomial u-form, deg_t a_j = 42-2j exactly (top degrees [42,40,...,0]): PASS
+H1 D: all 15 forbidden odd-triangle slots vanish; 463/484 nonzero (6 incidental zeros beyond the triangle): PASS
+H2 A: deg_v = 21 <= 21, deg_t = 6 <= 6: PASS
+H2 B: seven-band caps (4,10,15,21|4,10,15): PASS (max |coeff| = 48 digits)
+H2 C: polynomial u-form, deg_t a_j = 42-2j exactly (top degrees [42,40,...,0]): PASS
+H2 D: all 15 forbidden odd-triangle slots vanish; 469/484 nonzero (0 incidental zeros beyond the triangle): PASS
+M23_PATCH_CERT2_PASS
+=== cert3_qpair_rref_binding_p100207139.py ===
+R1: exact basis (leading slots [19, 19]) RREFs over Q with pivot columns exactly [19, 20]: PASS
+R2: row nonzeros 85/85, union 86, common zeros 383: PASS (matches recorded)
+R3: full support inside the seven bands (r >= 18-j): PASS
+R4: all 24 recorded ROW1 fingerprint values match the exact reduction at p=100207139: PASS
+M23_PATCH_CERT3_PASS
+=== cert5_frame_invariant_holdout_p1013.py ===

@@ -1,0 +1,13 @@
+1 1000000007 digits 10 rec 85 elapsed 0.13
+2 1000001011 digits 19 rec 64 elapsed 0.25
+3 1000002043 digits 28 rec 70 elapsed 0.39
+4 1000003051 digits 37 rec 67 elapsed 0.5
+5 1000004059 digits 46 rec 62 elapsed 0.61
+10 1000009133 digits 91 rec 76 elapsed 1.18
+20 1000019327 digits 181 rec 76 elapsed 2.39
+30 1000029461 digits 271 rec 71 elapsed 3.72
+40 1000039631 digits 361 rec 84 elapsed 5.08
+42 1000041671 digits 379 rec 120 elapsed 5.37
+ALL RECONSTRUCTED AND HELDOUT PASS
+LCM digits 178 max int digits 189
+terms 120

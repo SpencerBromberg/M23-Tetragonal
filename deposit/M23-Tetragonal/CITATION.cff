@@ -1,0 +1,49 @@
+cff-version: 1.2.0
+title: "Exact Tetragonal Coordinates for the Genus-4 M23 Quotient"
+message: "Please cite the article and computational reproducibility archive."
+type: dataset
+authors:
+  - family-names: Bromberg
+    given-names: Spencer Harkness
+  - family-names: Bromberg
+    given-names: Alexander Xavier
+date-released: "2026-08-26"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22117162
+preferred-citation:
+  type: article
+  title: "Exact Tetragonal Coordinates for the Genus-4 M23 Quotient"
+  authors:
+    - family-names: Bromberg
+      given-names: Spencer Harkness
+    - family-names: Bromberg
+      given-names: Alexander Xavier
+  year: 2026
+  doi: 10.5281/zenodo.22117162
+references:
+  - type: article
+    title: "The Mathieu group M23 is a Galois group over Q"
+    authors:
+      - family-names: Huang
+        given-names: Xiaoyu
+      - family-names: Jackson
+        given-names: Blake
+      - family-names: Lee
+        given-names: Kyu-Hwan
+      - family-names: Poonen
+        given-names: Bjorn
+      - family-names: Pries
+        given-names: Rachel
+      - family-names: Zhang
+        given-names: Shaowu
+    year: 2026
+  - type: article
+    title: "Galois Covers of M23 over Q: A Positive-Dimensional Approach"
+    authors:
+      - family-names: Bromberg
+        given-names: Spencer Harkness
+      - family-names: Bromberg
+        given-names: Alexander Xavier
+    year: 2026
+    doi: 10.5281/zenodo.22010546

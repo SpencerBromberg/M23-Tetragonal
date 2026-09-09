@@ -1,0 +1,16 @@
+# NOTE: the deposit's VERIFY_CHECKSUMS.sh enforces an exact MANIFEST match,
+# so nothing inside deposit/ may be added or ignored. The rules below cover
+# stray files outside the deposit only.
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

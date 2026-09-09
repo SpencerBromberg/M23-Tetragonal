@@ -1,0 +1,14 @@
+--- g0 (double points over T=0): monic degree 8, training primes 21, modulus digits 133
+    ordinary RR candidates: 4/8, held-out survivors: 0
+    projective candidates: 0, held-out passing pivots: 0
+    LLL: training-congruent rows 9, held-out survivors 0, shortest den digits 116
+--- h0 (simple points over T=0): monic degree 7, training primes 21, modulus digits 133
+    ordinary RR candidates: 4/7, held-out survivors: 0
+    projective candidates: 0, held-out passing pivots: 0
+    LLL: training-congruent rows 8, held-out survivors 0, shortest den digits 114
+--- B (w-branch polynomial): monic degree 14, training primes 20, modulus digits 131
+    ordinary RR candidates: 9/14, held-out survivors: 0
+    projective candidates: 0, held-out passing pivots: 0
+    LLL: training-congruent rows 15, held-out survivors 0, shortest den digits 119
+TOTAL: 0/29 coefficients reconstructed over Q and verified at held-out p=1013
+M23_BRANCH_LOCUS_RECONSTRUCTION_NEGATIVE

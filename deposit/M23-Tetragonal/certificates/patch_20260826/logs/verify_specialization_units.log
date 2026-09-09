@@ -1,0 +1,27 @@
+U4: input model G monic in u, 22 coefficient polynomials b_j in Z[t] with 198 integer coefficients (p-integral for every p): PASS
+p=31: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1013: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1000003: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1008001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1022201: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1028201: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1035301: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1043401: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1055501: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1074701: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1117111: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1123211: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1126211: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1160611: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1163611: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1183811: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1193911: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100050001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100161001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100202057: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100207139: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100208161: split=True, disc(-92) unit=True, tame(23)=True: PASS
+U5: p=31 first-jet det = 28 in F_31^x (recomputed): PASS
+U5: p=1013 kernel-first jet det = 121 in F_1013^x (recomputed): PASS
+All checkable hypotheses of the Specialization Lemma hold at p=31, p=1013, and all 21 training primes.
+M23_SPECIALIZATION_UNITS_VERIFY_PASS

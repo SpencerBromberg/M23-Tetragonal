@@ -1,0 +1,109 @@
+% prop_band_law.tex --- Proposition and proof: the q^18 seven-band law
+% from valuations at the totally ramified points. Paste-ready.
+
+\begin{proposition}[Geometric derivation of the $q^{18}$ seven-band law]
+\label{prop:band-law-proof}
+Let $X/\Q$ be the smooth genus-$4$ quotient with its degree-$23$ map $t$,
+$q=t^{2}+23$, and let $b',c'$ be the points over the two roots
+$\pm s=\pm\sqrt{-23}$, each totally ramified for $t$ (index $23$).
+Assume, as certified:
+\begin{enumerate}
+\item[(i)] $G(t,u)\in\Z[t,u]$ is the integral plane model, monic in $u$
+  with $\deg_u G=23$, and the fiber of $t$ over each of $\pm s$ is an
+  exact $23$rd power, so all sheets pass through $(\pm s,0)$;
+\item[(ii)] $u=qv$ where the coordinate $v$ has polar divisor exactly
+  $4(b'+c')$ (the published degree-$8$ coordinate), so
+  $v_{b'}(u)=v_{b'}(q)+v_{b'}(v)=23-4=19$;
+\item[(iii)] $C\,dt$ ranges over $H^{0}(K_X-b'-c')$ (the tetragonally
+  normalized two-plane) and $h=C\cdot G_u=\sum_{j=0}^{21}a_j(t)u^{j}$ is
+  polynomial of weighted degree $42$, $\deg_t a_j\le 42-2j$.
+\end{enumerate}
+Write $m_j:=\operatorname{ord}_q a_j$. Then
+\[
+m_j\;\ge\;\Bigl\lceil\frac{397-19j}{23}\Bigr\rceil
+\qquad(0\le j\le 21).
+\]
+Consequently:
+\begin{enumerate}
+\item[(a)] $j+m_j\ge 18$ for all $j$, so $h(t,qv)=q^{18}H(t,v)$ with
+  $H\in\Q[t,v]$ and $\deg_t H\le 6$, $\deg_v H\le 21$;
+\item[(b)] the minimal $q$-adic digit is
+  $r_{\min}(j)=\lceil(397-19j)/23\rceil$, i.e. the support diagonal
+  $d=j+r$ starts at $d=18$ for $j\le 4$, $d=19$ for $5\le j\le 10$,
+  $d=20$ for $11\le j\le 15$, and $d=21$ for $16\le j\le 21$: exactly
+  the seven-band caps $(4,10,15,21\mid 4,10,15)$;
+\item[(c)] for $j\ge 16$ one has $r_{\min}(j)=21-j$, while odd digits
+  are bounded by $r\le 20-j$; hence $a_j$ has no odd part in $t$ for
+  $j\ge 16$: the forbidden odd triangle, and with it the staircase
+  multiplicities $(33,1),\dots,(41,5)$, is forced.
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Work at $b'$ over $K=\Q(s)$ and write $v=v_{b'}$, normalized so a
+uniformizer $\pi$ has $v(\pi)=1$. Total tame ramification gives
+$v(t-s)=23$ and $v(dt)=v(d(t-s))=22$; since $t+s$ is a unit at $b'$,
+$v(q)=23$. By (ii), $v(u)=19$ and $u(b')=0$.
+
+\emph{Valuation of $G_u$.} By (i) we may factor
+$G(t,u)=\prod_{i=1}^{23}\bigl(u-u_i(t)\bigr)$ over the local field, all
+branches $u_i$ vanishing at $t=s$. The Puiseux expansion of $u$ at $b'$
+is $u=\sum_{k\ge 19}c_k\pi^{k}$ with $c_{19}\neq 0$ (the valuation is
+exactly $19$ by (ii)), and $\pi^{23}=(t-s)\cdot(\text{unit})$. The
+conjugate branches are $u_i=u(\zeta^{i}\pi)$ for a primitive $23$rd root
+of unity $\zeta$, so
+$u_1-u_i=c_{19}\,(1-\zeta^{19i})\,\pi^{19}+O(\pi^{20})$, and since
+$\gcd(19,23)=1$ we have $\zeta^{19i}\neq 1$ for $1\le i\le 22$; hence
+$v(u_1-u_i)=19$ for every $i\neq 1$ and
+\[
+v(G_u)\;=\;\sum_{i\neq 1}v(u_1-u_i)\;=\;22\cdot 19\;=\;418 .
+\]
+
+\emph{Lower bound for $v(h)$.} From $C\,dt=h\,dt/G_u$ and
+$v_{b'}(C\,dt)\ge 1$ by (iii),
+\[
+v(h)\;=\;v(C\,dt)-v(dt)+v(G_u)\;\ge\;1-22+418\;=\;397 .
+\]
+
+\emph{Distinct term valuations.} For $a_j\in\Q[t]$, Galois symmetry over
+$\Q$ gives $\operatorname{ord}_{t-s}a_j=\operatorname{ord}_{t+s}a_j
+=\operatorname{ord}_q a_j=m_j$, so
+$v(a_j u^{j})=23m_j+19j$. If $23m+19j=23m'+19j'$ then
+$23\mid 19(j'-j)$, forcing $j=j'$ (as $|j-j'|\le 21<23$) and $m=m'$:
+the valuations of the (nonzero) terms of $h=\sum a_ju^{j}$ are pairwise
+distinct. In a non-archimedean valuation, a sum of terms with pairwise
+distinct valuations has valuation equal to their minimum; hence
+$\min_j\,(23m_j+19j)=v(h)\ge 397$, so \emph{every} term satisfies
+$23m_j+19j\ge 397$, which is the asserted ceiling bound.
+
+\emph{Consequences.} (a) $j+m_j\ge j+\lceil(397-19j)/23\rceil\ge 18$
+for all $j$ (the minimum $18$ is attained on $j\le 4$), so
+$q^{18}\mid h(t,qv)$; and
+$\deg_t\bigl(a_jq^{\,j-18}\bigr)\le (42-2j)+2(j-18)=6$. (b) is the
+elementary evaluation of the ceiling at $j=0,\dots,21$, which yields
+$18{-}j,\,19{-}j,\,20{-}j,\,21{-}j$ on the ranges $j\le 4$, $5\le j\le
+10$, $11\le j\le 15$, $16\le j\le 21$ respectively. (c) For $j\ge 16$
+the bound is $m_j\ge 21-j$, while an odd digit at level $r$ requires
+$2r+1\le 42-2j$, i.e.\ $r\le 20-j<21-j$; hence all odd digits vanish.
+The same computation at $c'$ follows by conjugation and imposes nothing
+new on $\Q$-coefficients.
+\end{proof}
+
+\begin{remark}[Where the two-point vanishing acts]
+With the full canonical space ($v(C\,dt)\ge 0$) the bound becomes
+$m_j\ge\lceil(396-19j)/23\rceil$, which agrees with the two-plane bound
+at every $j$ except $j\equiv 16\pmod{23}$: at $j=16$ one has
+$396-19\cdot16=92=4\cdot 23$ exactly, so the canonical bound gives
+$m_{16}\ge 4$ while the vanishing at $b'+c'$ sharpens it to
+$m_{16}\ge 5=21-16$. The condition $C\,dt\in H^{0}(K-b'-c')$ is thus
+load-bearing precisely at the top row $j=16$ of the forbidden triangle
+--- the $(33,1)$ start of the staircase --- and nowhere else.
+\end{remark}
+
+\begin{remark}[Numeric certification]
+The ceiling table, the cap pattern, and the attainment of equality by
+the exact integer adjoints $H_1,H_2$ (tightness, equivalently
+$v_{b'}(C\,dt)=1$) are certified by
+\texttt{verify\_band\_law\_ceiling.py}
+(marker \texttt{M23\_BAND\_LAW\_NUMERIC\_PASS}).
+\end{remark}

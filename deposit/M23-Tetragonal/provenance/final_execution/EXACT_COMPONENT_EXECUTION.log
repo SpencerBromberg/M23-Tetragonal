@@ -1,0 +1,38 @@
+FINAL EXACT COMPONENT COVERAGE
+The exact identity was executed in two segments because the wrapper exceeded the execution window. Together the segment logs cover all 971 values; the metadata validator and the complete 1013-fiber sweep also passed.
+
+M23_EXACT_TETRAGONAL_SUITE_BEGIN
+
+===== 971-point exact characteristic-zero identity =====
+PASS_RANGE -485 -364 COUNT 121 ELAPSED 8.31
+PASS_RANGE -364 -243 COUNT 121 ELAPSED 7.88
+PASS_RANGE -243 -122 COUNT 121 ELAPSED 7.31
+PASS_RANGE -122 -1 COUNT 121 ELAPSED 6.22
+
+===== remaining exact identity ranges =====
+PASS_RANGE -1 120 COUNT 121 ELAPSED 5.42
+PASS_RANGE 120 242 COUNT 122 ELAPSED 7.19
+PASS_RANGE 242 364 COUNT 122 ELAPSED 8.01
+PASS_RANGE 364 486 COUNT 122 ELAPSED 9.47
+M23_TETRAGONAL_GLOBAL_IDENTITY_METADATA_V93_BEGIN
+G_MONIC_U_DEGREE = 23
+G_MAX_WEIGHT = 46
+H1_H2_MAX_WEIGHTS = [42, 42]
+HOMOGENIZED_WEIGHT_BOUND = 970
+R_TERM_COUNT = 120
+R_COEFFICIENT_GCD = 1
+R_DEG_T = 4
+R_DEG_Z = 23
+NONPROPORTIONAL_MINOR_DEG_0_1 = 3277392093507069843051065272834654795355973015163289221304956787527110522884455020425348382720
+M23_TETRAGONAL_GLOBAL_IDENTITY_METADATA_V93_PASS
+
+===== compactified p=1013 sweep =====
+F3: exact vector: 120 terms, gcd 1, bidegrees (T:4, W:23), max |coeff| = 189 digits: PASS
+F1: direct projective comparison fails across frames (expected; symmetric vs good frame differ by constant GL2): RECORDED
+F2: compactified fiber factorization types agree at all 1013/1013 values of t over F_1013: PASS
+    (2 fibers meet W=infinity in one frame: [562, 782]; restored as rational points at infinity)
+M23_PATCH_CERT5_PASS
+
+EXACT_ZERO_COUNT=971
+GLOBAL_REMAINDER_IDENTICALLY_ZERO=true
+M23_EXACT_TETRAGONAL_COMPONENT_COVERAGE_PASS

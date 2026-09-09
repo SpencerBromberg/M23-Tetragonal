@@ -1,0 +1,65 @@
+{
+  "engine": "SymPy Matrix.lll(delta=0.75)",
+  "training_primes": 21,
+  "crt_digits": 133,
+  "heldout_prime": 1013,
+  "block_size": 20,
+  "blocks": [
+    {
+      "block": 0,
+      "lll_rank": 21,
+      "usable_nonzero_denominator_rows": 21,
+      "training_congruent_rows": 21,
+      "heldout_survivors": 0,
+      "shortest_training_denominator_digits": 124,
+      "shortest_training_max_numerator_digits": 125
+    },
+    {
+      "block": 1,
+      "lll_rank": 21,
+      "usable_nonzero_denominator_rows": 21,
+      "training_congruent_rows": 21,
+      "heldout_survivors": 0,
+      "shortest_training_denominator_digits": 122,
+      "shortest_training_max_numerator_digits": 125
+    },
+    {
+      "block": 2,
+      "lll_rank": 21,
+      "usable_nonzero_denominator_rows": 21,
+      "training_congruent_rows": 21,
+      "heldout_survivors": 0,
+      "shortest_training_denominator_digits": 124,
+      "shortest_training_max_numerator_digits": 125
+    },
+    {
+      "block": 3,
+      "lll_rank": 21,
+      "usable_nonzero_denominator_rows": 21,
+      "training_congruent_rows": 21,
+      "heldout_survivors": 0,
+      "shortest_training_denominator_digits": 124,
+      "shortest_training_max_numerator_digits": 125
+    },
+    {
+      "block": 4,
+      "lll_rank": 21,
+      "usable_nonzero_denominator_rows": 21,
+      "training_congruent_rows": 21,
+      "heldout_survivors": 0,
+      "shortest_training_denominator_digits": 125,
+      "shortest_training_max_numerator_digits": 125
+    },
+    {
+      "block": 5,
+      "lll_rank": 21,
+      "usable_nonzero_denominator_rows": 21,
+      "training_congruent_rows": 21,
+      "heldout_survivors": 0,
+      "shortest_training_denominator_digits": 124,
+      "shortest_training_max_numerator_digits": 125
+    }
+  ],
+  "total_training_congruent_rows": 126,
+  "total_heldout_survivors": 0
+}

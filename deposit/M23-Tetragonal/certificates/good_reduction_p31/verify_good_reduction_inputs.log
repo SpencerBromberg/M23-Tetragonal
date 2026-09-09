@@ -1,0 +1,13 @@
+G1: t^2+23 has simple roots +/-15 mod 31; Hensel sections split: PASS
+G2: branch sections 0,+s,-s have pairwise unit differences: PASS
+G3: p=31 is prime to |M23| and to tame indices 2,23: PASS
+G4: Bezout relative-parameter exponent 17*19-14*23=1: PASS
+G5: p=31 Magma source is bound to monic degree-23 model, q-valuation 23, u-valuation 19, canonical dimension 4, and rank-2 twisted space: PASS
+G6: integral model contains all coefficient polynomials b[2]..b[23]: PASS
+G7: G(t=7,U) is irreducible and separable of degree 23 over F_31: PASS
+G7B: static JSON certificate and bound Magma-source SHA256 agree: PASS
+G8: by monicity + Gauss specialization, G is irreducible/separable over F_31(t): PASS
+G9: reduced first-jet determinant = 28 in F_31^x: PASS
+INDEPENDENT PUBLISHED CHECK: HJLPPZ Proposition 3.5 certifies arithmetic monodromy M23 and tameness at p=31.
+THEOREM INPUTS: purity of branch locus (Stacks Tag 0BMB) and tame Abhyankar local form (Stacks Tag 0EYG).
+M23_P31_GOOD_REDUCTION_INPUTS_PASS

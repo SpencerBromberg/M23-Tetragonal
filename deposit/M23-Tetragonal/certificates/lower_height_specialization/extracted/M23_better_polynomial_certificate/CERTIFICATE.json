@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "claim": "g(x)=f2(x+1) defines exactly the same degree-23 field and splitting field as HJLPPZ Example 3.7 f2",
+  "degree": 23,
+  "change_of_generator": "beta = alpha - 1; alpha = beta + 1",
+  "height_definition": "max absolute coefficient",
+  "published_f2_height": 67357061907,
+  "candidate_g_height": 1938799398,
+  "height_reduction_factor": 34.741635455676,
+  "digit_count": {"f2": 178, "g": 171},
+  "l1_coefficient_norm": {"f2": 226887070612, "g": 8538924410},
+  "translation_search": {"range": [-100, 100], "best_shift_k_in_f2_x_plus_k": 1},
+  "bounded_pgl2_search": {
+    "matrix_sup_norm_bound": 8,
+    "degree_23_transforms_checked": 37296,
+    "best_matrix": [1, -1, 0, 1],
+    "generator": "beta = alpha - 1"
+  },
+  "modular_checks": {
+    "p29": "irreducible degree 23",
+    "p5": "squarefree irreducible factor degrees 3,5,15; Frobenius order 15"
+  },
+  "global_minimality_claimed": false
+}

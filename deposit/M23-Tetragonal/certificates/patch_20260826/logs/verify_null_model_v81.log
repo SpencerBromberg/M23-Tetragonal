@@ -1,0 +1,6 @@
+N1: Monte Carlo (20000 samples) RR-success density on the actual 133-digit M:
+    observed 0.5861; analytic upper bound 6/pi^2 = 0.6079 (the Wang stopping rule loses a boundary sliver near |n|*d ~ M/2, so the empirical null sits slightly below)
+    paper's 68/120 = 0.5667 vs empirical null 0.5861: z = -0.43 (|z|<2: statistically indistinguishable from noise): PASS
+N2: false-survivor rate at p=1013: observed 0.00102 (12/11723), theory 1/1013 = 0.00099
+    expected false survivors among 68 candidates: 0.067 -> the single forced survivor (normalized coefficient) carries no evidential weight: PASS
+M23_NULL_MODEL_VERIFY_PASS

@@ -1,0 +1,33 @@
+{
+  "title": "Exact Tetragonal Coordinates for the Genus-4 M23 Quotient",
+  "subtitle": "Symmetric Principal Parts, Exact Arithmetic Closure, and the Seven-Band Support Law",
+  "creators": [
+    {
+      "name": "Bromberg, Spencer Harkness"
+    },
+    {
+      "name": "Bromberg, Alexander Xavier"
+    }
+  ],
+  "publication_date": "2026-08-26",
+  "resource_type": "publication/preprint",
+  "doi": "10.5281/zenodo.22117162",
+  "description": "Symmetric Principal Parts, Exact Arithmetic Closure, and the Seven-Band Support Law\n\nExact degree-4 coordinates for the genus-4 quotient in the HJLPPZ M23 construction. The article constructs and proves smooth the required Z_31 normalization model, proves a geometric seven-band support law, a primitive bidegree-(4,23) characteristic-zero equation, an exact PGL2(Q) transition to the symmetric principal-part frame, 22-prime coefficientwise validation, an exhaustive held-out p=1013 fiber comparison, and a general prime-degree support-polygon law. The accompanying archive provides executable certificates, exact data, recorded independent finite-field outputs, and checksum manifests. The logically separate appendix proves global ordinary-height minimality among all integer translates and over the full rational fractional-linear PGL2(Q) orbit of the Example 3.7 generator; only arbitrary primitive field generators outside that orbit remain beyond the claim.",
+  "related_identifiers": [
+    {
+      "identifier": "arXiv:2608.08538",
+      "relation": "references"
+    },
+    {
+      "identifier": "10.5281/zenodo.22010546",
+      "relation": "references"
+    }
+  ],
+  "license_note": "Mixed-license upload: article/documentation CC BY-NC-ND 4.0; executable source GPL-3.0-only; original computational data/outputs CC BY-NC 4.0; provenance retains original license status. See LICENSES.md.",
+  "licenses": [
+    "CC-BY-NC-ND-4.0",
+    "GPL-3.0-only",
+    "CC-BY-NC-4.0"
+  ],
+  "version": "1.0"
+}

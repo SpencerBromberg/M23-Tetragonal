@@ -1,0 +1,9 @@
+M23_SYMMETRIC_CRT21_VERIFY_PASS
+accepted_primes = 21
+digits = 133
+coefficient_checks = 2520
+rr_count = 68
+ordinary_heldout_survivors = 1
+row_projective_passing_rows = 0
+two_row_projective_passing_pairs = 0
+stable_20_to_21 = 1

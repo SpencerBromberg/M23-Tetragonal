@@ -1,0 +1,19 @@
+M23 LOWER-HEIGHT POLYNOMIAL CERTIFICATE: PASS
+
+Exact field identity: g(x) = f2(x + 1)
+Root change: beta = alpha - 1, alpha = beta + 1
+Therefore Q(alpha)=Q(beta), and the splitting fields are identical.
+
+degree(f2) = 23; degree(g) = 23
+height(f2) = 67357061907
+height(g)  = 1938799398
+height reduction factor = 34.741635455676
+digit-count metric: 178 -> 171
+L1 coefficient norm: 226887070612 -> 8538924410
+translation search [-100,100]: unique best k = 1
+mod 29: irreducible degree 23
+mod 5: irreducible factor degrees 3, 5, 15 (squarefree)
+Frobenius cycle type at 5: (15)(5)(3), order 15
+
+g(x) =
+x^23 + 23*x^22 + 299*x^21 + 2139*x^20 + 8234*x^19 - 8510*x^18 - 280094*x^17 - 1592842*x^16 - 3657782*x^15 + 3526406*x^14 + 44362906*x^13 + 63064206*x^12 - 221821982*x^11 - 727073654*x^10 + 229352458*x^9 + 1938799398*x^8 - 1207282236*x^7 - 435568756*x^6 + 1165914252*x^5 + 727883760*x^4 - 482357150*x^3 - 983586582*x^2 + 60455178*x + 242325562

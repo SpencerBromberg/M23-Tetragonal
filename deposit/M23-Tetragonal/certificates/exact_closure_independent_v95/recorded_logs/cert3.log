@@ -1,0 +1,5 @@
+R1: exact basis (leading slots [19, 19]) RREFs over Q with pivot columns exactly [19, 20]: PASS
+R2: row nonzeros 85/85, union 86, common zeros 383: PASS (matches recorded)
+R3: full support inside the seven bands (r >= 18-j): PASS
+R4: all 24 recorded ROW1 fingerprint values match the exact reduction at p=100207139: PASS
+M23_PATCH_CERT3_PASS

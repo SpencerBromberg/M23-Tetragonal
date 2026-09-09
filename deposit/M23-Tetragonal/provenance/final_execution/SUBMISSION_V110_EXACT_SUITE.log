@@ -1,0 +1,32 @@
+M23_EXACT_TETRAGONAL_SUITE_BEGIN
+
+===== exhaustive compactified p=1013 fiber comparison =====
+F3: exact vector: 120 terms, gcd 1, bidegrees (T:4, W:23), max |coeff| = 189 digits: PASS
+F1: direct projective comparison fails across frames (expected; symmetric vs good frame differ by constant GL2): RECORDED
+F2: compactified fiber factorization types agree at all 1013/1013 values of t over F_1013: PASS
+    (2 fibers meet W=infinity in one frame: [562, 782]; restored as rational points at infinity)
+FIBER_WORKERS = 5
+M23_PATCH_CERT5_PASS
+
+===== 971-point exact characteristic-zero identity =====
+M23_TETRAGONAL_GLOBAL_IDENTITY_V96_BEGIN
+EVALUATION_RANGE = -485..485
+WEIGHTED_DEGREE_BOUND = 970
+EXACT_ZERO_COUNT = 971
+GLOBAL_REMAINDER_IDENTICALLY_ZERO = true
+WORKERS = 4
+ELAPSED_SEC = 20.85
+M23_TETRAGONAL_GLOBAL_IDENTITY_V96_PASS
+M23_TETRAGONAL_GLOBAL_IDENTITY_METADATA_V93_BEGIN
+G_MONIC_U_DEGREE = 23
+G_MAX_WEIGHT = 46
+H1_H2_MAX_WEIGHTS = [42, 42]
+HOMOGENIZED_WEIGHT_BOUND = 970
+R_TERM_COUNT = 120
+R_COEFFICIENT_GCD = 1
+R_DEG_T = 4
+R_DEG_Z = 23
+NONPROPORTIONAL_MINOR_DEG_0_1 = 3277392093507069843051065272834654795355973015163289221304956787527110522884455020425348382720
+M23_TETRAGONAL_GLOBAL_IDENTITY_METADATA_V93_PASS
+
+M23_EXACT_TETRAGONAL_SUITE_PASS

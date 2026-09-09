@@ -1,0 +1,21 @@
+# Changelog - v101 scheme-theoretic closure release
+
+- Constructed the smooth proper p=31 model explicitly as the normalization of `P^1_{Z_31}` in `Q_31(X)`.
+- Proved the vertical degree-23 algebra finite étale from irreducible separable full-degree reduction, then used purity off the true branch divisor and tame Abhyankar local form along it.
+- Proved the two 23-ramified points extend to disjoint sections and the explicit `pi_+`, `pi_-` are integral relative parameters.
+- Added `certificates/good_reduction_p31/` with a scheme-theoretic dependency note and an executable local-input/source-binding verifier.
+- Expanded the p=31 principal-rank proof with disjoint sections, constant h0=2, Hartshorne III.12.11 base change, integral uniformizers, unit reductions, and exact certificate paths.
+- Added the full local derivation of the frame-transition principal-part constant.
+- Completed the degree 1/2/3 exclusion in the optimal tetragonal-pencil theorem.
+- Made finite-field generation verification explicitly prime-by-prime.
+- Defined the 22 retained tables, marked the 21-prime list as acceptance order, and added direct 15-prime and 42-prime list pointers.
+- Replaced the overstrong delta-invariant sentence by the certified discriminant/genus-consistency statement.
+- Added a general support-polygon corollary.
+- Replaced the subtitle with “Symmetric Principal Parts, Arithmetic-Frame Closure, and the Seven-Band Law.”
+- Removed running headers and changed the footer to a single page number; refined title and section typography.
+- Removed congratulations to HJLPPZ while retaining thanks for encouragement and materials.
+- Removed LaTeX build artifacts and the redistributed third-party PDF.
+- Added a critical publication review, certificate index, tested environment record, and a fresh v101 p=31 scheme-closure execution log; retained the unchanged complete v100 fast/exact baseline logs under provenance.
+- The proof-facing fast runner covers specialization, CRT, held-out, ramification, and the exact height-reduction check; the much slower exhaustive bounded PGL2 search now has its own runner.
+- Retained the corrected p=1013 frame-transition invocation with its two explicit data arguments.
+- Retained the complete passing v100 exact and fast execution logs under `provenance/v100_execution/` for computations unchanged in v101; the new p=31 scheme-closure computation has a fresh v101 execution log.

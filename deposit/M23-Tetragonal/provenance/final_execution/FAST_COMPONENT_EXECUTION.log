@@ -1,0 +1,290 @@
+FINAL FAST COMPONENT COVERAGE
+The top-level runner reached the ramification audit before the execution window ended; the ramification audit and height verifier were then rerun directly. Every fast-suite component therefore executed successfully in this final tree.
+
+M23_TETRAGONAL_FAST_SUITE_BEGIN
+
+===== python certificates/good_reduction_p31/verify_good_reduction_inputs.py =====
+G1: t^2+23 has simple roots +/-15 mod 31; Hensel sections split: PASS
+G2: branch sections 0,+s,-s have pairwise unit differences: PASS
+G3: p=31 is prime to |M23| and to tame indices 2,23: PASS
+G4: Bezout relative-parameter exponent 17*19-14*23=1: PASS
+G5: p=31 Magma source is bound to monic degree-23 model, q-valuation 23, u-valuation 19, canonical dimension 4, and rank-2 twisted space: PASS
+G6: integral model contains all coefficient polynomials b[2]..b[23]: PASS
+G7: G(t=7,U) is irreducible and separable of degree 23 over F_31: PASS
+G7B: static JSON certificate and bound Magma-source SHA256 agree: PASS
+G8: by monicity + Gauss specialization, G is irreducible/separable over F_31(t): PASS
+G9: reduced first-jet determinant = 28 in F_31^x: PASS
+INDEPENDENT PUBLISHED CHECK: HJLPPZ Proposition 3.5 certifies arithmetic monodromy M23 and tameness at p=31.
+THEOREM INPUTS: purity of branch locus (Stacks Tag 0BMB) and tame Abhyankar local form (Stacks Tag 0EYG).
+M23_P31_GOOD_REDUCTION_INPUTS_PASS
+
+===== python certificates/patch_20260826/scripts/verify_specialization_units.py =====
+U4: input model G monic in u, 22 coefficient polynomials b_j in Z[t] with 198 integer coefficients (p-integral for every p): PASS
+p=31: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1013: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1000003: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1008001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1022201: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1028201: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1035301: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1043401: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1055501: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1074701: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1117111: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1123211: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1126211: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1160611: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1163611: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1183811: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1193911: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100050001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100161001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100202057: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100207139: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100208161: split=True, disc(-92) unit=True, tame(23)=True: PASS
+U5: p=31 first-jet det = 28 in F_31^x (recomputed): PASS
+U5: p=1013 kernel-first jet det = 121 in F_1013^x (recomputed): PASS
+All checkable hypotheses of the Specialization Lemma hold at p=31, p=1013, and all 21 training primes.
+M23_SPECIALIZATION_UNITS_VERIFY_PASS
+
+===== python certificates/current_21prime/verify_symmetric_crt21.py =====
+M23_SYMMETRIC_CRT21_VERIFY_PASS
+accepted_primes = 21
+digits = 133
+coefficient_checks = 2520
+rr_count = 68
+ordinary_heldout_survivors = 1
+row_projective_passing_rows = 0
+two_row_projective_passing_pairs = 0
+stable_20_to_21 = 1
+
+===== python certificates/heldout_p1013/verify_heldout_p1013.py =====
+M23_HELDOUT_P1013_VERIFY_PASS
+training_primes = 21
+training_modulus_digits = 133
+ordinary_rr_candidates = 68
+ordinary_heldout_survivors = [(0, 1, 1)]
+five_coefficient_candidate_rows = [(1, 1), (3, 1), (5, 1), (6, 3), (7, 1), (9, 1), (10, 1), (11, 2), (17, 1), (18, 1)]
+five_coefficient_passing_rows = []
+ten_coefficient_candidate_pairs = [((10, 11), 1), ((18, 19), 1)]
+ten_coefficient_passing_pairs = []
+
+===== python certificates/common_denominator_133/verify_common_denominator_133.py =====
+M23_COMMON_DENOMINATOR_133_VERIFY_PASS
+CRT_DIGITS = 133
+HELDOUT_PRIME = 1013
+BLOCK 0 TRAIN 21 HOLD 0 DEN_DIGITS 124 MAXNUM_DIGITS 125
+BLOCK 1 TRAIN 21 HOLD 0 DEN_DIGITS 122 MAXNUM_DIGITS 125
+BLOCK 2 TRAIN 21 HOLD 0 DEN_DIGITS 124 MAXNUM_DIGITS 125
+BLOCK 3 TRAIN 21 HOLD 0 DEN_DIGITS 124 MAXNUM_DIGITS 125
+BLOCK 4 TRAIN 21 HOLD 0 DEN_DIGITS 125 MAXNUM_DIGITS 125
+BLOCK 5 TRAIN 21 HOLD 0 DEN_DIGITS 124 MAXNUM_DIGITS 125
+TOTAL_TRAINING_CONGRUENT_ROWS = 126
+TOTAL_HELDOUT_SURVIVORS = 0
+
+===== python certificates/qpair_goodframe_v93/verify_qpair_goodframe_v93.py =====
+M23_QPAIR_GOODFRAME_V93_BEGIN
+TRAINING_PRIME_COUNT = 15
+UNION_SUPPORT_SIZE = 86
+GOODFRAME_PIVOTS = 231 469
+GOODFRAME_PIVOTS_INVERTIBLE_ALL_15 = true
+CRT_MODULUS_DIGITS = 91
+FULL_NONPIVOT_RECONSTRUCTED = 168
+TRAINING_REDUCTION_CHECKS = 2580
+GOODFRAME_ROWS_TO_H1_H2_EXACT_MATCH = true
+LEAVE_ONE_OUT_DIAGNOSTIC = [(168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168), (168, 168)]
+NOTE = full 168-entry lift uses all 15 primes; exact acceptance is supplied by the characteristic-zero global identity certificate
+M23_QPAIR_GOODFRAME_V93_PASS
+
+===== python certificates/exact_closure_independent_v95/cert1_forbidden_triangle_lattice.py =====
+L1: 484 slots = 253 even + 231 odd: PASS
+L2: forbidden odd triangle {k odd, j>=16}: 15 slots, staircase (33,1)(35,2)(37,3)(39,4)(41,5): PASS  [pure lattice geometry]
+L3: q-pair space 469 = 253 + 216; law r>=18-j allows 130: PASS
+L4: seven-band law: 86 slots, counts (5,11,16,22|5,11,16), all within r>=18-j: PASS
+M23_PATCH_CERT1_PASS
+
+===== python certificates/exact_closure_independent_v95/cert2_exact_adjoints_band_law.py =====
+H1 A: deg_v = 21 <= 21, deg_t = 6 <= 6: PASS
+H1 B: seven-band caps (4,10,15,21|4,10,15): PASS (max |coeff| = 49 digits)
+H1 C: polynomial u-form, deg_t a_j = 42-2j exactly (top degrees [42,40,...,0]): PASS
+H1 D: all 15 forbidden odd-triangle slots vanish; 463/484 nonzero (6 incidental zeros beyond the triangle): PASS
+H2 A: deg_v = 21 <= 21, deg_t = 6 <= 6: PASS
+H2 B: seven-band caps (4,10,15,21|4,10,15): PASS (max |coeff| = 48 digits)
+H2 C: polynomial u-form, deg_t a_j = 42-2j exactly (top degrees [42,40,...,0]): PASS
+H2 D: all 15 forbidden odd-triangle slots vanish; 469/484 nonzero (0 incidental zeros beyond the triangle): PASS
+M23_PATCH_CERT2_PASS
+
+===== python certificates/band_law_geometric_v95/verify_band_law_ceiling.py =====
+V1: ceil((397-19j)/23) = certified band minimum r_min(j) for all j = 0..21 (caps 4, 10, 15, 21 reproduced): PASS
+V2: for j >= 16, minimal digit 21-j exceeds the top odd digit 20-j: forbidden odd triangle forced: PASS
+V3: exact adjoints satisfy ord_q(a_j) >= ceil((397-19j)/23) for all j, with equality attained: PASS
+M23_BAND_LAW_NUMERIC_PASS
+
+===== python certificates/exact_closure_independent_v95/cert3_qpair_rref_binding_p100207139.py =====
+R1: exact basis (leading slots [19, 19]) RREFs over Q with pivot columns exactly [19, 20]: PASS
+R2: row nonzeros 85/85, union 86, common zeros 383: PASS (matches recorded)
+R3: full support inside the seven bands (r >= 18-j): PASS
+R4: all 24 recorded ROW1 fingerprint values match the exact reduction at p=100207139: PASS
+M23_PATCH_CERT3_PASS
+
+===== python certificates/exact_tetragonal_v93/M23_tetragonal_exact_kernel_certificate_v92.py =====
+h degrees [[8, 6, 4, 2, 0], [8, 6, 4, 2, 0]]
+M23_TETRAGONAL_EXACT_KERNEL_V92_BEGIN
+EXACT_SPECIALIZATION_T_0_ZERO = True
+EXACT_SPECIALIZATION_T_1_ZERO = True
+EXACT_SPECIALIZATION_T_2_ZERO = True
+EXACT_SPECIALIZATION_T_3_ZERO = True
+EXACT_SPECIALIZATION_T_4_ZERO = True
+EXACT_SPECIALIZATION_T_5_ZERO = True
+CONSTRAINT_ROWS = 138
+CONSTRAINT_COLS = 120
+RANK_MOD_1000003 = 119
+KERNEL_DIMENSION_OVER_Q = 1
+EXACT_BIDEGREE_T = 4
+EXACT_BIDEGREE_W = 23
+M23_TETRAGONAL_EXACT_KERNEL_V92_PASS
+
+===== python certificates/exact_tetragonal_v93/verify_global_identity_metadata_v93.py =====
+M23_TETRAGONAL_GLOBAL_IDENTITY_METADATA_V93_BEGIN
+G_MONIC_U_DEGREE = 23
+G_MAX_WEIGHT = 46
+H1_H2_MAX_WEIGHTS = [42, 42]
+HOMOGENIZED_WEIGHT_BOUND = 970
+R_TERM_COUNT = 120
+R_COEFFICIENT_GCD = 1
+R_DEG_T = 4
+R_DEG_Z = 23
+NONPROPORTIONAL_MINOR_DEG_0_1 = 3277392093507069843051065272834654795355973015163289221304956787527110522884455020425348382720
+M23_TETRAGONAL_GLOBAL_IDENTITY_METADATA_V93_PASS
+
+===== python certificates/frame_transition_v95/verify_exact_frame_transition_v94.py =====
+M23_EXACT_FRAME_TRANSITION_V94_BEGIN
+B23_DIVISIBLE_BY_Q = true
+GOODFRAME_FIRST_JET_RANK = 2
+TRANSITION_MATRIX_PRIMITIVE = 9718693045169819066743297673119834593216940257793791469450716674784281955364438129650853737742920699321709602869946773855648462960671465803746362291 -25607140774189876405011391164460402180010842849857578359577201920481910333070041823933541055695259371502159329254283014074287086838246924062024439177 23380786748882483713100677944737745665112461310228515182066820286347571647601154649357173814190455036747456088825342453561796405215705126133540317815 118541105788627344372465383401963348420558929785051465395703781692834568129664923919806407188391867342746663258644336405504686522926958463000828766955
+TRANSITION_MATRIX_DIGITS = 148 149 149 150
+TRANSITION_DETERMINANT_NONZERO = true
+W_EQUALS = (A*Z+B)/(C*Z+D)
+FULL_TABLE_PRIME_COUNT = 22
+FULL_TABLE_PRIMES = [31, 1000003, 1008001, 1022201, 1028201, 1035301, 1043401, 1055501, 1074701, 1117111, 1123211, 1126211, 1160611, 100050001, 100161001, 1183811, 1193911, 1163611, 100202057, 100207139, 100208161, 1013]
+FULL_120_COEFFICIENT_PROJECTIVE_MATCH_ALL = true
+EXACT_SYMMETRIC_TERM_COUNT = 120
+EXACT_SYMMETRIC_MAX_COEFFICIENT_DIGITS = 3292
+EXACT_SYMMETRIC_TABLE_SHA256 = da9a09c0b11d2c9ec8769f7f8e0fed919efce9ce585dda7ead1a675326ac5742
+INCLUDES_HELDOUT_1013 = true
+INCLUDES_PRIME_100208161 = true
+M23_EXACT_FRAME_TRANSITION_V94_PASS
+
+===== python certificates/frame_transition_v95/cert6_frame_transition_p1013.py certificates/exact_tetragonal_v93/M23_tetragonal_polynomial_v92.txt certificates/heldout_p1013/M23_FastHeldout_p1013_user_output.log =====
+unique Mobius mod 1013: (a,b,c,d) = (546, 938, 283, 1); coefficientwise projective match with ratio 732: PASS
+M23_PATCH_CERT6_PASS
+
+===== python certificates/patch_20260826/scripts/verify_ramification_structure.py =====
+p=31: bideg(4,23), pair mult 22, T=0 branch mult 10 [2^8 1^7 (7 smooth double points, 1 node-collided at this small prime)], w*t=1 at ramified pts: PASS
+p=1013: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1000003: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1008001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1022201: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1028201: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1035301: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1043401: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1055501: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1074701: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1117111: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1123211: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1126211: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1160611: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1163611: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1183811: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1193911: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100050001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+
+===== targeted completion =====
+M23_FINAL_TARGETED_BEGIN
+G1: t^2+23 has simple roots +/-15 mod 31; Hensel sections split: PASS
+G2: branch sections 0,+s,-s have pairwise unit differences: PASS
+G3: p=31 is prime to |M23| and to tame indices 2,23: PASS
+G4: Bezout relative-parameter exponent 17*19-14*23=1: PASS
+G5: p=31 Magma source is bound to monic degree-23 model, q-valuation 23, u-valuation 19, canonical dimension 4, and rank-2 twisted space: PASS
+G6: integral model contains all coefficient polynomials b[2]..b[23]: PASS
+G7: G(t=7,U) is irreducible and separable of degree 23 over F_31: PASS
+G7B: static JSON certificate and bound Magma-source SHA256 agree: PASS
+G8: by monicity + Gauss specialization, G is irreducible/separable over F_31(t): PASS
+G9: reduced first-jet determinant = 28 in F_31^x: PASS
+INDEPENDENT PUBLISHED CHECK: HJLPPZ Proposition 3.5 certifies arithmetic monodromy M23 and tameness at p=31.
+THEOREM INPUTS: purity of branch locus (Stacks Tag 0BMB) and tame Abhyankar local form (Stacks Tag 0EYG).
+M23_P31_GOOD_REDUCTION_INPUTS_PASS
+U4: input model G monic in u, 22 coefficient polynomials b_j in Z[t] with 198 integer coefficients (p-integral for every p): PASS
+p=31: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1013: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1000003: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1008001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1022201: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1028201: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1035301: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1043401: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1055501: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1074701: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1117111: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1123211: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1126211: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1160611: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1163611: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1183811: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=1193911: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100050001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100161001: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100202057: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100207139: split=True, disc(-92) unit=True, tame(23)=True: PASS
+p=100208161: split=True, disc(-92) unit=True, tame(23)=True: PASS
+U5: p=31 first-jet det = 28 in F_31^x (recomputed): PASS
+U5: p=1013 kernel-first jet det = 121 in F_1013^x (recomputed): PASS
+All checkable hypotheses of the Specialization Lemma hold at p=31, p=1013, and all 21 training primes.
+M23_SPECIALIZATION_UNITS_VERIFY_PASS
+p=31: bideg(4,23), pair mult 22, T=0 branch mult 10 [2^8 1^7 (7 smooth double points, 1 node-collided at this small prime)], w*t=1 at ramified pts: PASS
+p=1013: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1000003: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1008001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1022201: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1028201: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1035301: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1043401: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1055501: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1074701: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1117111: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1123211: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1126211: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1160611: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1163611: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1183811: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1193911: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100050001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100161001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100202057: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100207139: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100208161: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+CROSS-PRIME: third branch value T=0 and law w(P)*t(P)=1 hold at all 22 primes: PASS
+GENUS CONSISTENCY: even residual half-degree = 62 = 66 - 4 at all 22 primes: PASS
+M23_RAMIFICATION_STRUCTURE_VERIFY_PASS
+M23 LOWER-HEIGHT POLYNOMIAL CERTIFICATE: PASS
+
+Exact field identity: g(x) = f2(x + 1)
+Root change: beta = alpha - 1, alpha = beta + 1
+Therefore Q(alpha)=Q(beta), and the splitting fields are identical.
+
+degree(f2) = 23; degree(g) = 23
+height(f2) = 67357061907
+height(g)  = 1938799398
+height reduction factor = 34.741635455676
+digit-count metric: 178 -> 171
+L1 coefficient norm: 226887070612 -> 8538924410
+translation search [-100,100]: unique best k = 1
+mod 29: irreducible degree 23
+mod 5: irreducible factor degrees 3, 5, 15 (squarefree)
+Frobenius cycle type at 5: (15)(5)(3), order 15
+
+g(x) =
+x^23 + 23*x^22 + 299*x^21 + 2139*x^20 + 8234*x^19 - 8510*x^18 - 280094*x^17 - 1592842*x^16 - 3657782*x^15 + 3526406*x^14 + 44362906*x^13 + 63064206*x^12 - 221821982*x^11 - 727073654*x^10 + 229352458*x^9 + 1938799398*x^8 - 1207282236*x^7 - 435568756*x^6 + 1165914252*x^5 + 727883760*x^4 - 482357150*x^3 - 983586582*x^2 + 60455178*x + 242325562
+M23_FINAL_TARGETED_PASS
+
+M23_TETRAGONAL_FAST_COMPONENT_COVERAGE_PASS

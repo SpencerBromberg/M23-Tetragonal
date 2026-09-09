@@ -1,0 +1,5 @@
+F3: exact vector: 120 terms, gcd 1, bidegrees (T:4, W:23), max |coeff| = 189 digits: PASS
+F1: direct projective comparison fails across frames (expected; symmetric vs good frame differ by constant GL2): RECORDED
+F2: compactified fiber factorization types agree at all 1013/1013 values of t over F_1013: PASS
+    (2 fibers meet W=infinity in one frame: [562, 782]; restored as rational points at infinity)
+M23_PATCH_CERT5_PASS

@@ -1,0 +1,71 @@
+{
+  "certificate": "M23 p=31 smooth-model arithmetic inputs",
+  "prime": 31,
+  "hensel_roots_mod_p": [
+    15,
+    16
+  ],
+  "branch_pairwise_distinct": true,
+  "ramification_indices": [
+    2,
+    23
+  ],
+  "bezout_identity": {
+    "lhs": "17*19-14*23",
+    "value": 1
+  },
+  "integral_model_source": "certificates/regression_p31/M23_Magma_RepunitRoute_p31_regression_v50.m",
+  "integral_model_source_sha256": "1677c6739f7010678e509827789af461f7577caf08c6cb976cc28aa38b6ba482",
+  "irreducible_specialization_t": 7,
+  "G7_coefficients_ascending_mod31": [
+    28,
+    12,
+    12,
+    10,
+    16,
+    30,
+    11,
+    17,
+    26,
+    2,
+    9,
+    12,
+    15,
+    17,
+    21,
+    19,
+    19,
+    3,
+    8,
+    20,
+    23,
+    28,
+    0,
+    1
+  ],
+  "G7_degree": 23,
+  "G7_irreducible": true,
+  "G7_derivative_gcd_degree": 0,
+  "vertical_generic_conclusion": "monic Gauss specialization implies irreducible separable degree 23 over F_31(t)",
+  "q_branch_valuation": 23,
+  "u_branch_valuation": 19,
+  "canonical_dimension": 4,
+  "twisted_space_dimension": 2,
+  "first_jet_matrix_mod31": [
+    [
+      4,
+      28
+    ],
+    [
+      25,
+      27
+    ]
+  ],
+  "first_jet_determinant_mod31": 28,
+  "theorem_dependencies": [
+    "Stacks Project Tag 0BMB",
+    "Stacks Project Tag 0EYG",
+    "Hartshorne III.12.11"
+  ],
+  "independent_published_check": "HJLPPZ Proposition 3.5: arithmetic monodromy M23 at p=31 and tame reduction"
+}

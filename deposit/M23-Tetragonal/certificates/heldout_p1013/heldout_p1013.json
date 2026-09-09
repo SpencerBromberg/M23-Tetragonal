@@ -1,0 +1,73 @@
+{
+  "training_primes": 21,
+  "training_modulus_digits": 133,
+  "heldout_prime": 1013,
+  "ordinary_rr_candidates": 68,
+  "ordinary_heldout_survivors": [
+    {
+      "index": 0,
+      "numerator": 1,
+      "denominator": 1
+    }
+  ],
+  "five_coefficient_projective_candidate_rows": [
+    {
+      "row": 1,
+      "candidate_pivots": 1
+    },
+    {
+      "row": 3,
+      "candidate_pivots": 1
+    },
+    {
+      "row": 5,
+      "candidate_pivots": 1
+    },
+    {
+      "row": 6,
+      "candidate_pivots": 3
+    },
+    {
+      "row": 7,
+      "candidate_pivots": 1
+    },
+    {
+      "row": 9,
+      "candidate_pivots": 1
+    },
+    {
+      "row": 10,
+      "candidate_pivots": 1
+    },
+    {
+      "row": 11,
+      "candidate_pivots": 2
+    },
+    {
+      "row": 17,
+      "candidate_pivots": 1
+    },
+    {
+      "row": 18,
+      "candidate_pivots": 1
+    }
+  ],
+  "five_coefficient_projective_passing_rows": [],
+  "ten_coefficient_projective_candidate_pairs": [
+    {
+      "rows": [
+        10,
+        11
+      ],
+      "candidate_pivots": 1
+    },
+    {
+      "rows": [
+        18,
+        19
+      ],
+      "candidate_pivots": 1
+    }
+  ],
+  "ten_coefficient_projective_passing_pairs": []
+}

@@ -1,0 +1,25 @@
+p=31: bideg(4,23), pair mult 22, T=0 branch mult 10 [2^8 1^7 (7 smooth double points, 1 node-collided at this small prime)], w*t=1 at ramified pts: PASS
+p=1013: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1000003: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1008001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1022201: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1028201: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1035301: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1043401: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1055501: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1074701: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1117111: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1123211: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1126211: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1160611: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1163611: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1183811: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=1193911: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100050001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100161001: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100202057: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100207139: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+p=100208161: bideg(4,23), pair mult 22, T=0 branch mult 8 [2^8 1^7 (all 8 double points smooth)], w*t=1 at ramified pts: PASS
+CROSS-PRIME: third branch value T=0 and law w(P)*t(P)=1 hold at all 22 primes: PASS
+GENUS CONSISTENCY: even residual half-degree = 62 = 66 - 4 at all 22 primes: PASS
+M23_RAMIFICATION_STRUCTURE_VERIFY_PASS

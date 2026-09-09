@@ -1,0 +1,1376 @@
+{
+ "convention": "flat[5*i+j] = coeff of W^i T^j (both ascending)",
+ "primes": [
+  {
+   "prime": 31,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 10,
+   "node_collisions_at_T0": 1,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (7 smooth double points, 1 node-collided at this small prime)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     61
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": null,
+   "w_side_small_prime_note": "deg B = 12, deg S = 63, exact split = False (collisions expected)",
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    7,
+    29,
+    30,
+    1,
+    12,
+    21,
+    22,
+    2,
+    1
+   ],
+   "h0_monic": [
+    21,
+    13,
+    25,
+    29,
+    0,
+    1,
+    13,
+    1
+   ]
+  },
+  {
+   "prime": 1013,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    49,
+    650,
+    895,
+    589,
+    2,
+    748,
+    190,
+    137,
+    322,
+    41,
+    648,
+    143,
+    102,
+    388,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    4,
+    344,
+    296,
+    786,
+    622,
+    879,
+    48,
+    355,
+    1
+   ],
+   "h0_monic": [
+    86,
+    175,
+    938,
+    542,
+    693,
+    693,
+    586,
+    1
+   ]
+  },
+  {
+   "prime": 1000003,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    966762,
+    861418,
+    935597,
+    737200,
+    251010,
+    403858,
+    70087,
+    586193,
+    260283,
+    400861,
+    614546,
+    322741,
+    746547,
+    496996,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    938191,
+    75966,
+    605056,
+    187687,
+    500040,
+    190338,
+    364555,
+    750318,
+    1
+   ],
+   "h0_monic": [
+    132636,
+    70576,
+    888612,
+    208681,
+    209791,
+    585657,
+    813538,
+    1
+   ]
+  },
+  {
+   "prime": 1008001,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    75840,
+    583275,
+    317583,
+    582348,
+    855942,
+    635170,
+    16976,
+    780665,
+    296456,
+    544763,
+    252340,
+    228253,
+    148672,
+    62697,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    688886,
+    664906,
+    2401,
+    614737,
+    772848,
+    278179,
+    323470,
+    32130,
+    1
+   ],
+   "h0_monic": [
+    763341,
+    174163,
+    876118,
+    825315,
+    395177,
+    290414,
+    249871,
+    1
+   ]
+  },
+  {
+   "prime": 1022201,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    1002163,
+    420524,
+    804695,
+    951450,
+    134274,
+    953875,
+    947480,
+    267837,
+    61370,
+    723746,
+    196971,
+    624419,
+    474539,
+    1004900,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    824671,
+    918681,
+    18094,
+    136966,
+    10289,
+    339115,
+    815166,
+    439930,
+    1
+   ],
+   "h0_monic": [
+    356140,
+    918097,
+    156937,
+    411079,
+    687055,
+    370424,
+    641113,
+    1
+   ]
+  },
+  {
+   "prime": 1028201,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    91621,
+    138802,
+    894230,
+    922728,
+    116906,
+    158971,
+    693339,
+    212226,
+    363938,
+    11174,
+    295357,
+    751722,
+    82304,
+    669591,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    441591,
+    771706,
+    603254,
+    214005,
+    909326,
+    197387,
+    32964,
+    257901,
+    1
+   ],
+   "h0_monic": [
+    196155,
+    544824,
+    19326,
+    406105,
+    490850,
+    484965,
+    515671,
+    1
+   ]
+  },
+  {
+   "prime": 1035301,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    185872,
+    1029797,
+    373126,
+    35421,
+    973917,
+    392863,
+    703309,
+    127388,
+    448400,
+    950901,
+    587947,
+    160152,
+    49870,
+    675785,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    457669,
+    861714,
+    910519,
+    757256,
+    309803,
+    984489,
+    619577,
+    275367,
+    1
+   ],
+   "h0_monic": [
+    632097,
+    237472,
+    192286,
+    1009600,
+    163510,
+    378782,
+    377106,
+    1
+   ]
+  },
+  {
+   "prime": 1043401,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    423050,
+    890817,
+    758676,
+    734650,
+    92702,
+    572523,
+    454626,
+    739544,
+    1011944,
+    796430,
+    168162,
+    466399,
+    154711,
+    521378,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    91576,
+    357241,
+    857746,
+    1041426,
+    940888,
+    477088,
+    230411,
+    188749,
+    1
+   ],
+   "h0_monic": [
+    397230,
+    746076,
+    477784,
+    678258,
+    600738,
+    670158,
+    135091,
+    1
+   ]
+  },
+  {
+   "prime": 1055501,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    52295,
+    383160,
+    85527,
+    616360,
+    399059,
+    386599,
+    436098,
+    159992,
+    338630,
+    125637,
+    54234,
+    777976,
+    911370,
+    134473,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    122076,
+    796324,
+    197618,
+    426810,
+    322899,
+    93541,
+    604412,
+    196152,
+    1
+   ],
+   "h0_monic": [
+    803659,
+    128005,
+    997896,
+    550877,
+    370832,
+    364100,
+    302970,
+    1
+   ]
+  },
+  {
+   "prime": 1074701,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    539689,
+    594187,
+    340538,
+    611969,
+    438855,
+    240223,
+    1066233,
+    1033311,
+    565305,
+    736033,
+    6171,
+    619328,
+    1065878,
+    982576,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    416411,
+    344730,
+    656313,
+    153670,
+    497154,
+    786838,
+    549904,
+    172204,
+    1
+   ],
+   "h0_monic": [
+    22206,
+    715411,
+    561198,
+    374487,
+    9646,
+    728678,
+    401395,
+    1
+   ]
+  },
+  {
+   "prime": 1117111,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    61387,
+    680318,
+    960852,
+    239596,
+    951060,
+    619059,
+    653770,
+    638859,
+    764462,
+    339130,
+    617410,
+    902141,
+    787409,
+    772019,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    471766,
+    1003,
+    415849,
+    1063574,
+    1092600,
+    290871,
+    221587,
+    1064018,
+    1
+   ],
+   "h0_monic": [
+    930165,
+    1059402,
+    241802,
+    658280,
+    862105,
+    205541,
+    547419,
+    1
+   ]
+  },
+  {
+   "prime": 1123211,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    666862,
+    371489,
+    531739,
+    955315,
+    1081093,
+    1047064,
+    808494,
+    560940,
+    927126,
+    955049,
+    747348,
+    1075699,
+    871534,
+    1054161,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    795439,
+    3,
+    90546,
+    865310,
+    255275,
+    70372,
+    339148,
+    578863,
+    1
+   ],
+   "h0_monic": [
+    617701,
+    243040,
+    596147,
+    655880,
+    368086,
+    465787,
+    748876,
+    1
+   ]
+  },
+  {
+   "prime": 1126211,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    195724,
+    1008742,
+    1088483,
+    1022620,
+    88722,
+    731823,
+    515580,
+    172881,
+    281716,
+    997123,
+    70022,
+    958424,
+    14577,
+    816115,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    314179,
+    150466,
+    92698,
+    806478,
+    930169,
+    433176,
+    48992,
+    265051,
+    1
+   ],
+   "h0_monic": [
+    869529,
+    331127,
+    1079060,
+    1036363,
+    846825,
+    242950,
+    191933,
+    1
+   ]
+  },
+  {
+   "prime": 1160611,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    270724,
+    552645,
+    247808,
+    759328,
+    840945,
+    175873,
+    906177,
+    242520,
+    36756,
+    175212,
+    293878,
+    671849,
+    809198,
+    635607,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    754065,
+    778961,
+    752366,
+    1016517,
+    942115,
+    1115515,
+    3852,
+    711696,
+    1
+   ],
+   "h0_monic": [
+    343736,
+    1115683,
+    991142,
+    1006542,
+    447012,
+    1049470,
+    597589,
+    1
+   ]
+  },
+  {
+   "prime": 1163611,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    611430,
+    734868,
+    1072028,
+    1062308,
+    1001902,
+    215844,
+    555427,
+    124433,
+    258875,
+    908601,
+    195572,
+    759175,
+    1024856,
+    1004576,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    83964,
+    543415,
+    152114,
+    1071231,
+    256912,
+    1142580,
+    656761,
+    415421,
+    1
+   ],
+   "h0_monic": [
+    218287,
+    676189,
+    709327,
+    977877,
+    658744,
+    506488,
+    600640,
+    1
+   ]
+  },
+  {
+   "prime": 1183811,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    244394,
+    1173396,
+    701491,
+    31654,
+    51405,
+    635786,
+    1066688,
+    27735,
+    1110039,
+    245653,
+    790706,
+    227164,
+    194166,
+    136528,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    379729,
+    691551,
+    609302,
+    457684,
+    175789,
+    639443,
+    912390,
+    221261,
+    1
+   ],
+   "h0_monic": [
+    370452,
+    2476,
+    569710,
+    317964,
+    109150,
+    38586,
+    915935,
+    1
+   ]
+  },
+  {
+   "prime": 1193911,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    194916,
+    710010,
+    555144,
+    838814,
+    339646,
+    255182,
+    438048,
+    902665,
+    497986,
+    290143,
+    463896,
+    562370,
+    716933,
+    800538,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    447769,
+    408825,
+    1020506,
+    1138940,
+    717469,
+    1023731,
+    350007,
+    781201,
+    1
+   ],
+   "h0_monic": [
+    450651,
+    1193738,
+    611466,
+    631195,
+    886074,
+    1057964,
+    52645,
+    1
+   ]
+  },
+  {
+   "prime": 100050001,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    96134112,
+    36205509,
+    65277857,
+    63947522,
+    10478000,
+    7111721,
+    70057360,
+    67444920,
+    83258616,
+    27878904,
+    58194409,
+    63361232,
+    90429587,
+    77911795,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    30239099,
+    66857763,
+    93743216,
+    43397926,
+    77232952,
+    64826955,
+    78460267,
+    99779068,
+    1
+   ],
+   "h0_monic": [
+    15484797,
+    4315463,
+    27139004,
+    3136385,
+    59837393,
+    76043148,
+    39324692,
+    1
+   ]
+  },
+  {
+   "prime": 100161001,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    42637298,
+    56840625,
+    77869029,
+    74333984,
+    48339109,
+    72178315,
+    85877609,
+    92565013,
+    92341679,
+    54939214,
+    88037512,
+    95217027,
+    63013205,
+    1225968,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    43732463,
+    69535088,
+    47986786,
+    56732670,
+    38554215,
+    77819783,
+    30710785,
+    40848727,
+    1
+   ],
+   "h0_monic": [
+    83912626,
+    45300764,
+    60496683,
+    75517658,
+    14636948,
+    53934867,
+    41861666,
+    1
+   ]
+  },
+  {
+   "prime": 100202057,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    95905789,
+    93628171,
+    42635344,
+    94068819,
+    96906559,
+    95611477,
+    79742812,
+    25587469,
+    63185472,
+    9905026,
+    11630228,
+    54058596,
+    29072914,
+    95758271,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    8319960,
+    10465405,
+    20140882,
+    59015204,
+    24487886,
+    87555847,
+    30189163,
+    93961484,
+    1
+   ],
+   "h0_monic": [
+    39282888,
+    92306477,
+    68282330,
+    60008521,
+    88204830,
+    92591942,
+    89415967,
+    1
+   ]
+  },
+  {
+   "prime": 100207139,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    39347289,
+    30243614,
+    3604246,
+    71751372,
+    15028808,
+    4383461,
+    15802077,
+    7094894,
+    10673179,
+    92252147,
+    72392775,
+    96511082,
+    96918752,
+    37757608,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    39374272,
+    98095660,
+    76484327,
+    81834339,
+    6353957,
+    51573393,
+    30993596,
+    80573393,
+    1
+   ],
+   "h0_monic": [
+    70619169,
+    88355044,
+    50948007,
+    9989276,
+    36882111,
+    20371981,
+    77855316,
+    1
+   ]
+  },
+  {
+   "prime": 100208161,
+   "bidegree_T_W": [
+    4,
+    23
+   ],
+   "w_times_t_at_ramified_points": 1,
+   "deg_A": 180,
+   "pair_disc_multiplicity": 22,
+   "third_branch_value": 0,
+   "third_branch_disc_multiplicity": 8,
+   "node_collisions_at_T0": 0,
+   "riemann_hurwitz_t": 52,
+   "fiber_T0_pattern": "2^8 1^7 (all 8 double points smooth)",
+   "node_residual": {
+    "degree": 124,
+    "multiplicity_profile": [
+     0,
+     62
+    ],
+    "even_residual_half_degree": 62,
+    "genus_numerology": "p_a=(4-1)(23-1)=66; half even residual degree=62; expected g=4"
+   },
+   "w_branch_polynomial_monic": [
+    80618946,
+    55794941,
+    99378898,
+    30466104,
+    52509377,
+    56601325,
+    32702376,
+    36394504,
+    75524289,
+    2317484,
+    60481584,
+    67339103,
+    74117024,
+    42113637,
+    1
+   ],
+   "riemann_hurwitz_w": 14,
+   "g0_monic": [
+    35160270,
+    83780135,
+    92871382,
+    71336761,
+    32764103,
+    22880987,
+    64148095,
+    21892107,
+    1
+   ],
+   "h0_monic": [
+    86709990,
+    100033533,
+    58077150,
+    90311329,
+    77515225,
+    22510863,
+    30911116,
+    1
+   ]
+  }
+ ]
+}

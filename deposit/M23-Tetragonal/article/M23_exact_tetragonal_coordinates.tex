@@ -1,0 +1,1056 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,tabularx,array,longtable}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xurl}
+\usepackage{hyperref}
+
+\hypersetup{hidelinks,
+  pdftitle={Exact Tetragonal Coordinates for the Genus-4 M23 Quotient},
+  pdfauthor={Spencer Harkness Bromberg and Alexander Xavier Bromberg},
+  pdfsubject={Symmetric Principal Parts, Exact Arithmetic Closure, and the Seven-Band Support Law; DOI 10.5281/zenodo.22117162},
+  pdfkeywords={M23, inverse Galois problem, genus 4, tetragonal coordinates, Hurwitz spaces, exact computation}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.34em plus 0.06em minus 0.04em}
+\setlist{nosep,leftmargin=1.7em}
+\setlength{\abovedisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\belowdisplayskip}{6pt plus 2pt minus 2pt}
+\setlength{\abovedisplayshortskip}{4pt plus 2pt minus 1pt}
+\setlength{\belowdisplayshortskip}{4pt plus 2pt minus 1pt}
+\setlength{\jot}{2pt}
+\titleformat{\section}{\large\bfseries}{\thesection}{0.65em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{1.55ex plus .35ex minus .2ex}{.62ex}
+\titlespacing*{\subsection}{0pt}{1.15ex plus .3ex minus .15ex}{.42ex}
+\pagestyle{plain}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\cO}{\mathcal O}
+\newcommand{\cK}{\mathcal K}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Nm}{\operatorname{Nm}}
+
+\title{\vspace{-1.15em}{\fontsize{15.5}{18}\selectfont\bfseries Exact Tetragonal Coordinates for the Genus-$4$ $M_{23}$ Quotient}\\[-0.08em]
+{\normalsize\itshape Symmetric Principal Parts, Exact Arithmetic Closure, and the Seven-Band Support Law}}
+\author{Spencer Harkness Bromberg \quad Alexander Xavier Bromberg}
+\date{August 26, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The genus-$4$ quotient $X/\Q$ in the regular $M_{23}$ realization carries a degree-$23$ function $t$ and a tetragonal pencil.  This article makes the pencil exact in two coordinates.  Let $b',c'$ be the conjugate totally ramified points above $q=t^2+23=0$.  A Galois-symmetric principal-part normalization of $L(\operatorname{div}(dt)-b'-c')$ defines a degree-$4$ coordinate $w$ satisfying $w(P)t(P)=1$ at both points.  In the integral coordinate $u=qv$, the monic model $G(t,u)=0$ has $\operatorname{ord}_{P_\pm}(q)=23$, $\operatorname{ord}_{P_\pm}(u)=19$, and $\operatorname{ord}_{P_\pm}(G_u)=418$, forcing the ceiling
+\[
+m_j\ge\left\lceil\frac{397-19j}{23}\right\rceil.
+\]
+This proves a $q^{18}$ factor, seven support bands with caps $(4,10,15,21\mid4,10,15)$, and a $15$-slot forbidden odd triangle.  A parity-adapted frame yields primitive integer adjoints $H_1,H_2$ and a primitive $120$-term relation $R(T,Z)$ of exact bidegree $(4,23)$; a weighted-degree bound and $971$ exact evaluations prove $R(t,H_1/H_2)=0$ over $\Q$.  An explicit matrix in $\mathrm{PGL}_2(\Q)$ carries $H_1/H_2$ to $w$, giving the exact symmetric equation; the reductions of that equation match all $22$ finite-field tables coefficientwise ($21$ reconstruction primes and one independent held-out prime).  The published plane model of Huang, Jackson, Lee, Poonen, Pries, and Zhang fixes the coordinates, and their gonality-$4$ statement in Remark~3.4 supplies the optimality input.
+\end{abstract}
+\section{Introduction}
+This article gives exact tetragonal closure for a genus-$4$ quotient $X/\Q$ carrying a degree-$23$ function $t$ in a regular $M_{23}$ realization.  The quotient, function, and published plane model come from Huang--Jackson--Lee--Poonen--Pries--Zhang (HJLPPZ) \cite{HJLPPZ2026}; the plane model fixes the coordinates used throughout, and Remark~3.4 supplies the optimality input that excludes maps of degree at most $3$ over $\Q$.  The construction below independently recovers the degree-$4$ pencil, a symmetric two-point normalization, an exact bidegree-$(4,23)$ equation, and the geometric support law that makes coefficient reconstruction possible.  These exact coordinates complement the positive-dimensional Hurwitz-space approach in \cite{BrombergBromberg2026}, which develops braid-orbit reconstruction, admissible-cover boundary geometry, and higher-branch refinements for $M_{23}$.
+
+The central object is a primitive polynomial
+\[
+R(T,Z)=\sum_{k=0}^{23}\sum_{d=0}^{4}c_{k,d}Z^kT^d\in\mathbb Z[T,Z]
+\]
+with all $120$ coefficient slots nonzero and maximum coefficient size $189$ decimal digits.  Its arithmetic coordinate $z$ generates $\Q(X)$ together with $t$ and has degree $4$.  A characteristic-zero principal-part calculation gives an exact constant transformation $z\leftrightarrow w$ in $\mathrm{PGL}_2(\Q)$ to the Galois-symmetric tetragonal coordinate.  The transformed symmetric equation has coefficient heights up to $3292$ digits.  Thus, a $133$-digit symmetric-frame CRT modulus lies far below the scale required for direct reconstruction.
+
+The structural theorem is the seven-band law.  After $u=(t^2+23)v$, canonical adjoints have weighted degree $42$.  The two totally ramified points force a valuation ceiling on every $u^j$ coefficient.  The ceiling reduces a $484$-slot weighted lattice to an $86$-slot support carrier and isolates a $15$-slot odd triangle.  The proof uses the ramification data $v(q)=23$, $v(u)=19$, $v(G_u)=418$, and the extra vanishing imposed by $b'+c'$.
+
+Modular calculations support discovery and independent validation, while characteristic-zero arguments prove the final relation and frame transition.  A degree bound and $971$ exact specializations establish the relation; a six-specialization rank computation supplies an independent uniqueness check.  The finite-field comparison uses $21$ CRT tables in acceptance order and an independently computed table at $p=1013$.  The exact transition reproduces all $120$ symmetric coefficients projectively at every one of these primes, including $p=100208161$ as a direct validation prime.  Section~\ref{sec:certificates} separates proof-bearing computations, corroborating checks, discovery calculations, and bounded diagnostics.
+
+Appendix~\ref{app:height} establishes global ordinary-height minimality for the HJLPPZ Example~3.7 generator under all rational fractional-linear changes.  That calculation remains logically separate from the tetragonal theorem.
+\section{Model and the tetragonal pencil}\label{sec:model}
+Let $X/\Q$ be the genus-$4$ quotient of \cite{HJLPPZ2026}, and let
+\[
+t:X\longrightarrow\PP^1_\Q
+\]
+be the published degree-$23$ function.  Put
+\[
+q=t^2+23,\qquad K=\Q(\sqrt{-23}),\qquad s^2=-23.
+\]
+The two totally ramified points above $q=0$ are
+\[
+P_+=b',\qquad P_-=c',\qquad t(P_\pm)=\pm s,
+\]
+and the conjugate sum $D=P_++P_-$ descends to $\Q$.  Let $v$ denote the published degree-$8$ coordinate and set $u=qv$.  At either point $P_\pm$, the local valuations are
+\[
+v_P(q)=23,\qquad v_P(u)=19,\qquad v_P(dt)=22.
+\]
+The Bezout identity $17\cdot19-14\cdot23=1$ gives conjugate uniformizers
+\[
+\pi_+=\frac{u^{17}}{(t-s)^{14}},\qquad
+\pi_-=\frac{u^{17}}{(t+s)^{14}}.
+\]
+
+Fix $K_t=\operatorname{div}(dt)$ and define
+\[
+\mathcal V=L(K_t-D).
+\]
+Multiplication by $dt$ identifies $\mathcal V$ with $H^0(X,\omega_X(-D))$.
+
+\begin{theorem}[Optimal tetragonal pencil, after HJLPPZ]\label{thm:tetragonal-pencil}
+The $\Q$-vector space $\mathcal V$ has dimension $2$.  Every basis $(f_1,f_2)$ defines a rational function $f_1/f_2$ of degree $4$ on $X$.
+\end{theorem}
+
+\begin{proof}
+Riemann--Roch gives $\dim_\Q\mathcal V=2$ by \cite[Remark~3.4]{HJLPPZ2026}.  The complete pencil $|K_X-D|$ has degree $4$.  A positive fixed part would leave a rational map to $\PP^1$ of degree at most $3$.  Degree $1$ is impossible because $X$ has genus $4$, and degree $2$ is impossible because $X$ is non-hyperelliptic; the canonical model of $X$ is the quadric--cubic complete intersection described after \cite[Lemma~3.3]{HJLPPZ2026}.  Thus, only degree $3$ remains.  The complex degree-$3$ maps are the two rulings of the canonical quadric, and \cite[Remark~3.4]{HJLPPZ2026} shows that neither ruling descends to $\Q$.  Hence, the pencil is base-point free over $\Q$, and every basis ratio has degree $4$.
+\end{proof}
+\section{Symmetric principal-part normalization}\label{sec:principal-parts}
+The finite-field construction and the characteristic-zero frame calculation use principal parts of Riemann--Roch functions.  
+
+For $f\in L(K_t)$, define
+\[
+\lambda_{0,\pm}(f)=\operatorname{red}_{P_\pm}\!\left(f\pi_\pm^{22}\right)\in K,
+\]
+where $\operatorname{red}_{P}$ denotes reduction in the residue field.  Since $v_{P_\pm}(f)\ge-22$, these reductions are defined.  Membership in $\mathcal V$ is equivalent to
+\[
+\lambda_{0,+}(f)=\lambda_{0,-}(f)=0.
+\]
+For $f\in\mathcal V$, define the first surviving principal-part coefficients
+\[
+\lambda_{1,\pm}(f)=\operatorname{red}_{P_\pm}\!\left(f\pi_\pm^{21}\right).
+\]
+Conjugation exchanges the two coefficients.  Hence,
+\[
+A_1(f)=\frac{\lambda_{1,+}(f)+\lambda_{1,-}(f)}2,
+\qquad
+B_1(f)=\frac{\lambda_{1,+}(f)-\lambda_{1,-}(f)}{2s}
+\]
+are $\Q$-linear functionals on $\mathcal V$.
+
+\begin{lemma}[Smooth proper model at $31$]\label{lem:p31-model}
+Let $R=\mathbb Z_{31}$ and $K_{31}=\mathbb Q_{31}$.  The base change $X_{K_{31}}$ has a smooth proper $R$-model $\mathcal X$ such that $t$ extends to a finite morphism
+\[
+t_R:\mathcal X\longrightarrow\PP^1_R.
+\]
+The closures $\mathcal P_+,\mathcal P_-$ of $P_+,P_-$ are disjoint sections of $\mathcal X/R$.  Along these sections the functions
+\[
+\pi_+=\frac{u^{17}}{(t-s)^{14}},\qquad
+\pi_-=\frac{u^{17}}{(t+s)^{14}}
+\]
+are regular relative parameters.
+\end{lemma}
+
+\begin{proof}
+Since $15^2\equiv-23\pmod{31}$ and $2\cdot15\not\equiv0\pmod{31}$, Hensel's lemma gives $s\in R$ with $s^2=-23$.  In homogeneous coordinates $[T:S]$ on $\PP^1_R$, let
+\[
+\mathcal B=V\!\bigl(T(T-sS)(T+sS)\bigr).
+\]
+This effective Cartier divisor is the disjoint union of the three sections $t=T/S=0,s,-s$: their pairwise differences are $s,-s,2s$, all $31$-adic units.  In particular, $\mathcal B$ is regular and finite \emph{\'etale} over $R$.
+
+Put $L=K_{31}(X)$ and define $\mathcal X$ to be the normalization of $\PP^1_R$ in $L$.  The scheme $\PP^1_R$ is excellent, so the normalization is finite; hence $\mathcal X$ is proper over $R$, and the generic fiber is the smooth projective curve $X_{K_{31}}$.
+
+It remains to prove smoothness.  Let $\eta_{31}$ be the vertical codimension-one point of $\PP^1_R$ and $A_0=\mathcal O_{\PP^1_R,\eta_{31}}$, a DVR with uniformizer $31$ and residue field $\F_{31}(t)$.  Here, $q=t^2+23$ is a unit, so the change $u=qv$ is invertible.  The integral $u$-equation used below is monic of degree $23$ and therefore defines a finite free $A_0$-algebra $B_0$ of rank $23$.
+
+Exact factorization gives that the specialization $G(7,U)\in\F_{31}[U]$ is irreducible of degree $23$, with derivative relatively prime to $G(7,U)$.  If the monic polynomial $G(t,U)$ factored over $\F_{31}(t)$, Gauss's lemma would give a factorization into monic positive-degree polynomials in $\F_{31}[t,U]$, and specialization at $t=7$ would preserve their $U$-degrees, contradicting irreducibility.  Thus, $G$ is irreducible over $\F_{31}(t)$.  Since $31\nmid23$, an irreducible polynomial of degree $23$ in characteristic $31$ cannot be inseparable.  Hence, $B_0/31B_0$ is a separable field extension of degree $23$.  The reduction of $G_u$ is nonzero in that field and therefore a unit; Nakayama makes $G_u$ a unit in $B_0$.  Consequently, $B_0/A_0$ is finite \emph{\'etale}.  Since $q$ is invertible in $K_{31}(t)$, one has $K_{31}(t,u)=K_{31}(t,v)=L$; thus the fraction field of $B_0$ is $L$.  As a finite \'etale algebra over the DVR $A_0$, $B_0$ is normal, so it is already the integral closure of $A_0$ in $L$.  Thus, the normalization has no vertical ramification at $31$.  Independently, \cite[Proposition~3.5]{HJLPPZ2026} gives the arithmetic-monodromy statement at $31$.
+
+Let $U=\PP^1_R\setminus\mathcal B$.  By \cite[Proposition~3.5]{HJLPPZ2026}, the characteristic-zero branch locus is exactly $0,\pm s$, and infinity is unramified.  The preceding paragraph treats the unique vertical codimension-one point.  Hence, the normalization over $U$ is unramified in codimension one.  Since $U$ is regular and $\mathcal X_U$ is normal, purity of the branch locus gives a finite \emph{\'etale} morphism $\mathcal X_U\to U$ \cite[Tag~0BMB]{StacksProject}.
+
+Along $\mathcal B$, the ramification indices are $2$ over $t=0$ and $23$ over $t=\pm s$ (with unramified points also present above $t=0$).  The codimension-one points above $\mathcal B$ lie over the generic fiber and therefore have residue characteristic $0$; their residue extensions are separable and their ramification is tame.  The vertical codimension-one point is already unramified.  Thus, the finite cover of $\PP^1_R\setminus\mathcal B$ is tamely ramified over $\PP^1_R$ in codimension one, exactly the hypothesis of Abhyankar's lemma for a regular divisor.  Since $2$ and $23$ are units in $R$, that lemma gives, \`etale locally on $\PP^1_R$, the standard tame form
+\[
+A[r]/(r^e-\tau),\qquad e\in\{1,2,23\},
+\]
+where $\tau$ cuts out the relevant branch section \cite[Tag~0EYG]{StacksProject}.  Because that section is \`etale over $R$, one may choose $\tau$ as a relative parameter, so $A$ is \`etale over $R[\tau]$; the displayed ring is then \`etale over $R[r]$.  It is therefore smooth over $R$.  Together with the \`etale locus above $U$, this proves that $\mathcal X/R$ is smooth and proper.
+
+The $K_{31}$-points $P_\pm$ extend uniquely to sections by properness.  Their reductions remain distinct because $t(P_+)-t(P_-)=2s$ is a unit.  At either section, the standard tame parameter $r_\pm$ satisfies
+\[
+t\mp s=a_\pm r_\pm^{23}
+\]
+with $a_\pm$ a unit.  The local ring at the closed point of $\mathcal P_\pm$ is regular, hence factorial.  The characteristic-zero valuation $\operatorname{ord}_{P_\pm}(u)=19$ therefore factors
+\[
+u=b_\pm r_\pm^{19}
+\]
+with $b_\pm$ regular.  An exact special-fiber calculation gives order $19$ as well, so the reduction of $b_\pm$ at $r_\pm=0$ is nonzero; hence, $b_\pm$ is a unit in the two-dimensional local ring.  Consequently,
+\[
+\pi_\pm=\frac{b_\pm^{17}}{a_\pm^{14}}r_\pm^{17\cdot19-14\cdot23}
+       =\frac{b_\pm^{17}}{a_\pm^{14}}r_\pm,
+\]
+so $\pi_\pm$ is regular and has unit linear term.  Thus, it is a relative parameter along $\mathcal P_\pm$.
+\end{proof}
+
+\begin{remark}
+The exceptional $p=31$ collision in the tetragonal \emph{plane equation} is a singularity of that nonnormal presentation, not a singularity of $\mathcal X$.  The normalization above is smooth; the plane-model collision disappears on normalization.
+\end{remark}
+
+\begin{proposition}[Nondegenerate symmetric principal-part frame]\label{prop:principal-rank}
+The map $J=(A_1,B_1):\mathcal V\to\Q^2$ is an isomorphism.  Consequently, a unique basis $(f_A,f_B)$ satisfies
+\[
+A_1(f_A)=1,\quad B_1(f_A)=0,
+\qquad
+A_1(f_B)=0,\quad B_1(f_B)=1.
+\]
+\end{proposition}
+
+\begin{proof}
+Use the smooth proper model $\mathcal X/R$ from Lemma~\ref{lem:p31-model}.  Write $\rho:\mathcal X\to\operatorname{Spec}R$ for the structure morphism.  Since $t_R$ is finite and $\PP^1_R$ is projective over $R$, the morphism $\rho$ is projective.  Put
+\[
+\mathcal D=\mathcal P_++\mathcal P_-,\qquad
+\mathcal L=\omega_{\mathcal X/R}(-\mathcal D).
+\]
+The divisor $\mathcal D$ is relative effective Cartier, so $\mathcal L$ is an invertible, hence $R$-flat, sheaf.  Riemann--Roch gives $h^0(\mathcal L_{K_{31}})=2$ on the generic fiber.  On the special fiber, the $p=31$ differential computation gives a $4$-dimensional canonical space and two independent zeroth principal-part conditions, so $h^0(\mathcal L_{\F_{31}})=2$ as well.  These are the only two fibers of the trait $\operatorname{Spec}R$; hence $h^0$ is constant.  The cohomology-and-base-change theorem implies that $\rho_*\mathcal L$ is a free $R$-module of rank $2$ and that base change identifies the generic and special fibers with the corresponding spaces of sections; this is the constant-dimension case of \cite[Theorem~III.12.11]{Hartshorne1977}.
+
+Lemma~\ref{lem:p31-model} shows that $\pi_\pm$ are relative parameters, while the opposite factors $t\pm s$, together with $2$ and $2s$, are units along the relevant sections.  In the tame chart $t\mp s=a_\pm r_\pm^{23}$, relative differentiation gives
+\[
+dt=r_\pm^{22}\varepsilon_\pm\,dr_\pm,
+\qquad \varepsilon_\pm\in\mathcal O_{\mathcal X,\mathcal P_\pm}^{\times},
+\]
+because $23a_\pm$ is a unit modulo $r_\pm$.  Thus, for a relative differential $\omega=f\,dt\in\mathcal L$, the product $f\pi_\pm^{21}$ is regular along $\mathcal P_\pm$ and the restriction of $f\pi_\pm^{21}$ to the section lies in $R$.  The trace and skew-trace formulas therefore define an $R$-linear first-jet map
+\[
+J_R:\rho_*\mathcal L\longrightarrow R^2
+\]
+whose generic fiber is the original $J$ and whose formation commutes with reduction.  Reduction at $p=31$ gives
+\[
+\begin{pmatrix}4&28\\25&27\end{pmatrix}\in M_2(\F_{31}),
+\qquad \det=28\in\F_{31}^{\times}.
+\]
+Thus, $J_R$ reduces to an isomorphism on the closed fiber.  Its determinant is a unit (equivalently, apply Nakayama to the cokernel), so $J_R$ itself is an isomorphism.  Passing to the generic fiber identifies $J_R\otimes_R K_{31}$ with $J\otimes_{\Q}K_{31}$; faithful scalar extension then gives the asserted isomorphism $J:\mathcal V\to\Q^2$.  The characteristic-zero calculation in Theorem~\ref{thm:frame-transition} supplies an independent exact recovery of the same frame.
+\end{proof}
+
+\begin{definition}[Symmetric tetragonal coordinate]
+Set $w=f_A/f_B\in\Q(X)$.
+\end{definition}
+
+\begin{proposition}[Values at the totally ramified points]\label{prop:wt-law}
+The symmetric coordinate satisfies
+\[
+\boxed{w(P_\pm)t(P_\pm)=1}.
+\]
+\end{proposition}
+
+\begin{proof}
+The normalized principal parts give
+\[
+\lambda_{1,+}(f_A)=\lambda_{1,-}(f_A)=1,
+\qquad
+\lambda_{1,+}(f_B)=s,
+\qquad
+\lambda_{1,-}(f_B)=-s.
+\]
+At each point, the value of the ratio equals the ratio of the first surviving Laurent coefficients.  Thus, $w(P_+)=1/s$ and $w(P_-)=-1/s$, and multiplication by $t(P_\pm)=\pm s$ gives the identity.
+\end{proof}
+
+\begin{theorem}[Exact geometric bidegree]\label{thm:bidegree}
+The functions $t$ and $w$ generate $\Q(X)$.  Their image in $\PP^1_t\times\PP^1_w$ is an integral curve of bidegree $(4,23)$.
+\end{theorem}
+
+\begin{proof}
+The extension $\Q(X)/\Q(t)$ has prime degree $23$, while $w$ has degree $4$.  Membership $w\in\Q(t)$ would force the degree of $w$ on $X$ to be divisible by $23$.  Hence, $\Q(t,w)$ is a proper enlargement of $\Q(t)$ inside a prime-degree extension, giving $\Q(t,w)=\Q(X)$.  For an integral curve of bidegree $(a,b)$ in $\PP^1\times\PP^1$, the first and second projections have degrees $b$ and $a$; here these degrees are $23$ and $4$.
+\end{proof}
+\section{Finite-field realization}\label{sec:modular}
+
+The modular pipeline starts from the published degree-$8$ plane equation of \cite{HJLPPZ2026}.  An integral reparameterization sets
+\[
+ q=t^2+23,
+ \qquad
+ u=qv,
+\]
+where $v$ denotes the published degree-$8$ coordinate.  At a split prime $p$, write $q=(t-s_+)(t-s_-)$.  The conjugate degree-$2$ place above $q=0$ splits into two rational places; at either place the local valuations are
+\[
+ v_P(q)=23,
+ \qquad
+ v_P(u)=19.
+\]
+The Bezout identity
+\[
+ 17\cdot19-14\cdot23=1
+\]
+therefore gives a local uniformizer
+\[
+ \pi=\frac{u^{17}}{(t-s)^{14}}.
+\]
+
+The implementation performs four exact steps at each accepted prime:
+\begin{enumerate}
+\item compute a $4$-dimensional canonical space;
+\item impose the two zeroth principal-part conditions at the conjugate points to recover the $2$-dimensional tetragonal pencil;
+\item apply the principal-part trace/skew-trace normalization of \S\ref{sec:principal-parts};
+\item form the multiplication matrix of $w$ on the degree-$23$ function field and take the characteristic polynomial of that matrix.
+\end{enumerate}
+
+At every accepted prime, the run verifies $[\F_p(X):\F_p(t)]=23$ and returns the cleared characteristic-polynomial relation
+\[
+ \deg_W H_p=23,
+ \qquad
+ \deg_T H_p=4.
+\]
+This bidegree verifies generation prime by prime.  Indeed, if the normalized coordinate lay in $\F_p(t)$, multiplication by it would be scalar and the characteristic polynomial would be a $23$rd power; after primitive denominator clearing, the $T$-degree of that polynomial would be $0$ or a multiple of $23$, not $4$.  Since the ambient extension has prime degree $23$, the coordinate therefore generates it, and the characteristic polynomial equals the minimal polynomial.  Each successful run also returns a flattened list of $120=(23+1)(4+1)$ coefficients.
+
+\subsection{Twenty-one-prime CRT checkpoint}
+
+The accepted prime list, displayed in acceptance order, is
+\[
+\begin{aligned}
+&31,\ 1000003,\ 1008001,\ 1022201,\ 1028201,\ 1035301,\ 1043401,\\
+&1055501,\ 1074701,\ 1117111,\ 1123211,\ 1126211,\ 1160611,\\
+&100050001,\ 100161001,\ 1183811,\ 1193911,\ 1163611,\\
+&100202057,\ 100207139,\ 100208161.
+\end{aligned}
+\]
+Their product has $133$ decimal digits, and exact reduction verifies all
+\[
+ 21\cdot120=2520
+\]
+coefficient congruences against the CRT vector.
+
+\subsection{Independent held-out prime \texorpdfstring{$p=1013$}{p=1013}}
+
+The prime $1013$ stays outside the CRT reconstruction.  The independent finite-field computation reaches the same canonical-space dimension, the same two-dimensional residue kernel, a rank-$2$ symmetric principal-part matrix, and a relation of bidegree $(23,4)$ in the program's $(W,T)$ reporting order.
+
+Against the $133$-digit training CRT, the independent Python validator records:
+\[
+ 68\text{ ordinary rational-reconstruction candidates}
+ \longrightarrow
+ \boxed{1\text{ held-out survivor}},
+\]
+with survivor index $0$ and value $1$.  Ten five-coefficient rows admit formal projective reconstructions, and zero rows survive the held-out table.  Two adjacent ten-coefficient row pairs admit formal projective reconstructions, and zero pairs survive.
+
+The held-out calculation supplies an independent consistency check on the normalized modular relation.  It also shows that coefficientwise and small projective rational reconstruction remain below the true characteristic-zero height scale.
+
+\section{Height and reconstruction strategy}\label{sec:height-strategy}
+The $21$-prime symmetric-frame CRT has a $133$-digit modulus, and direct rational reconstruction in that frame does not survive the independent $p=1013$ test.  The exact calculation explains the obstruction quantitatively: the compact arithmetic-frame equation has maximum coefficient size $189$ digits, while the primitive symmetric-frame equation obtained from the exact transition has maximum coefficient size $3292$ digits.  Thus, adding a small number of primes in the symmetric frame does not address the relevant height scale.
+
+The reconstruction first recovers the two-dimensional adjoint plane, then changes to a parity-adapted arithmetic basis.  CRT and lattice calculations only discover exact candidates.  Section~\ref{sec:exact-closure} proves the final relation by characteristic-zero division and exact evaluation.
+\section{Adjoint space and slot arithmetic}\label{sec:adjoint}
+
+The dense coefficient reconstruction admits a cleaner modular
+representation.  Let $G(t,u)=0$ be the integral degree-$23$ plane model,
+let $G_u=\partial G/\partial u$, and let $C_1,C_2$ denote the two
+symmetric normalized canonical functions, so $w=C_1/C_2$.  At the three
+generic split primes
+\[
+1013,\qquad100207139,\qquad100208161,
+\]
+the replay computations give the same section profile: in the published
+$v$-basis each $C_i$ has a common denominator of degree $85$ and cleared
+numerator degree $83$, while the quotient $w$ has a common denominator of
+degree $88$.  In the integral $u=qv$ basis, $q=t^2+23$, the denominator
+of the $u^j$ coordinate follows the exact staircase
+\[
+D_j=D_0q^{\,j-\lceil4j/23\rceil}.
+\]
+The exponent is the Newton slope $4/23$ written in the power basis.
+
+More importantly, define
+\[
+ h_i=C_iG_u.
+\]
+At all three generic primes, the $h_i$ are polynomials and satisfy
+\[
+ h_i=\sum_{j=0}^{21}a_{i,j}(t)u^j,
+ \qquad \deg_t a_{i,j}\le 42-2j.
+\]
+Thus, $h_i$ has weighted degree $42$ for
+$\operatorname{wt}(t)=1$, $\operatorname{wt}(u)=2$, and
+\[
+ \boxed{w=h_1/h_2}.
+\]
+The $p=1013$ fixed-factor computation gives
+$\gcd(h_1,h_2)=1$.  The fixed weighted support has
+$43+41+\cdots+1=484$ slots.  Both large generic primes contain $469$
+nonzero slots in each adjoint; at $p=1013$, $h_2$ has $469$ and $h_1$
+has $468$, consistent with one accidental modular zero.  The gain is denominator elimination in a fixed weighted polynomial space; support density remains high.  The prime $31$ preserves polynomiality and the weighted
+bound but exhibits additional degree cancellations, so it serves as a
+structural specialization rather than a coefficient-level reconstruction
+prime.
+
+\section{Seven-band support law for the adjoint two-plane}\label{sec:seven-band}
+
+An invertible basis change preserves the two-dimensional adjoint plane.  Coefficient recovery therefore reconstructs the plane before choosing an ordered basis.  Write $q=t^2+23$.  The full weighted-degree-$42$ monomial lattice contains $484$ slots.  Splitting by parity in $t$ gives
+\[
+ 253\ \text{even slots},\qquad 231\ \text{odd slots}.
+\]
+The high-$u$ odd triangle contains exactly $15$ forbidden slots, with weight multiplicities
+\[
+ (33,1),\ (35,2),\ (37,3),\ (39,4),\ (41,5).
+\]
+Hence, the admissible $q$-pair carrier has dimension
+\[
+ 253+(231-15)=469.
+\]
+\begin{proposition}[Geometric seven-band support law]\label{prop:seven-band}
+Let $s^2=-23$, so the two totally ramified points $b',c'$ lie over
+$t=\pm s$, and write
+\[
+ h(t,u)=\sum_{j=0}^{21}a_j(t)u^j,\qquad
+ m_j=\operatorname{ord}_{q}a_j,\qquad q=t^2+23.
+\]
+For an adjoint differential in $H^0(K_X-b'-c')$, one has
+\[
+ \boxed{\displaystyle
+ m_j\ge \left\lceil\frac{397-19j}{23}\right\rceil}
+ \qquad(0\le j\le21).
+\]
+Consequently, $h(t,qv)=q^{18}H(t,v)$ with
+$H\in\Q[t,v]$, $\deg_tH\le6$, $\deg_vH\le21$, and the $q$-pair
+support is contained in the seven bands
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.12}
+\setlength{\tabcolsep}{5.5pt}
+\begin{tabular}{lccccccc}
+\toprule
+& \multicolumn{4}{c}{Even channel} & \multicolumn{3}{c}{Odd channel} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-8}
+$q$-level & 18 & 19 & 20 & 21 & 18 & 19 & 20 \\
+Maximum $v$-degree & 4 & 10 & 15 & 21 & 4 & 10 & 15 \\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus, the seven-band carrier contains exactly
+\[
+ 5+11+16+22+5+11+16=86
+\]
+slots.  For $j\ge16$ the odd part vanishes identically, giving the
+$15$-slot forbidden odd triangle with weight multiplicities
+$(33,1),(35,2),(37,3),(39,4),(41,5)$.
+\end{proposition}
+
+\begin{proof}
+Work at $b'$ over $K=\Q(s)$ and normalize a uniformizer $\pi$ by
+$v_{b'}(\pi)=1$.  Total tame ramification of index $23$ gives
+\[
+ v_{b'}(t-s)=23,\qquad v_{b'}(dt)=22,
+ \qquad v_{b'}(q)=23,
+\]
+because $t+s$ is a unit at $b'$.  The published coordinate $v$ has
+polar order $4$ at $b'$ and $u=qv$, hence
+\[
+ v_{b'}(u)=23-4=19.
+\]
+
+The integral plane equation is monic of degree $23$ in $u$, and the
+fiber over $t=s$ is a $23$rd power.  Locally write
+$G(t,u)=\prod_{i=1}^{23}(u-u_i(t))$.  A Puiseux expansion of the chosen
+branch has
+\[
+ u=c_{19}\pi^{19}+O(\pi^{20}),\qquad c_{19}\ne0.
+\]
+The substitutions $\pi\mapsto\zeta^i\pi$ produce the conjugate branches for a
+primitive $23$rd root of unity $\zeta$.  Since $\gcd(19,23)=1$,
+\[
+ v_{b'}(u_1-u_i)=19\qquad(i\ne1),
+\]
+and therefore
+\[
+ v_{b'}(G_u)=\sum_{i\ne1}v_{b'}(u_1-u_i)=22\cdot19=418.
+\]
+
+Write the adjoint differential as
+\[
+ C\,dt=\frac{h\,dt}{G_u}.
+\]
+Membership in $H^0(K_X-b'-c')$ gives $v_{b'}(C\,dt)\ge1$, so
+\[
+ v_{b'}(h)
+ =v_{b'}(C\,dt)-v_{b'}(dt)+v_{b'}(G_u)
+ \ge 1-22+418=397.
+\]
+Because $a_j(t)\in\Q[t]$, conjugation of $s$ and $-s$ gives
+$\operatorname{ord}_{t-s}a_j=\operatorname{ord}_{t+s}a_j=m_j$.  Hence,
+\[
+ v_{b'}(a_j(t)u^j)=23m_j+19j.
+\]
+These valuations are pairwise distinct: if
+$23m+19j=23m'+19j'$ with $0\le j,j'\le21$, then
+$23\mid19(j'-j)$, so $j=j'$ and then $m=m'$.  A nonarchimedean sum of
+terms with distinct valuations has valuation equal to the minimum.
+Thus, every nonzero term satisfies
+\[
+ 23m_j+19j\ge397,
+\]
+which is the stated ceiling bound.
+
+Evaluating the ceiling gives
+\[
+ m_j\ge
+ \begin{cases}
+ 18-j,&0\le j\le4,\\
+ 19-j,&5\le j\le10,\\
+ 20-j,&11\le j\le15,\\
+ 21-j,&16\le j\le21.
+ \end{cases}
+\]
+Therefore, $j+m_j\ge18$ and $q^{18}\mid h(t,qv)$.  The weighted-degree
+bound $\deg_ta_j\le42-2j$ then gives
+\[
+ \deg_t\bigl(a_jq^{j-18}\bigr)\le6,
+\]
+so $\deg_tH\le6$.  The four lower boundaries above yield the even
+caps $4,10,15,21$.  For $j\ge16$, an odd $q$-digit at level $r$ would
+require $r\le20-j$, whereas the valuation bound gives
+$r\ge21-j$; hence all such odd digits vanish.  The odd caps are
+therefore $4,10,15$, and counting the allowed monomials gives the
+stated $86$ slots and the $1,2,3,4,5$ forbidden-triangle staircase.
+The argument at $c'$ is the Galois conjugate calculation.
+\end{proof}
+
+\begin{remark}[Load-bearing role of the two-point vanishing]\label{rem:band-law-twopoint}
+For the full canonical space, the same calculation would give
+$m_j\ge\lceil(396-19j)/23\rceil$.  This differs from the tetragonal
+bound only at $j=16$: the canonical estimate permits $m_{16}=4$, while
+vanishing at $b'+c'$ forces $m_{16}\ge5$.  Thus, the extra two-point
+condition acts precisely at the top row of the forbidden odd triangle.
+\end{remark}
+
+\begin{corollary}[Exact support and row-reduced plane]\label{cor:seven-band-exact}
+The exact integer adjoints satisfy the bound of
+Proposition~\ref{prop:seven-band}, with equality attained.  In the
+canonical lexicographic row-reduced two-plane the pivot slots are
+$19,20$, each row has $85$ nonzero entries, the support union has size
+$86$, the support intersection has size $84$, and the common-zero count
+is $383$.
+\end{corollary}
+
+\begin{proof}
+Substitution of the two exact adjoints verifies the ceiling bound for all $j=0,\ldots,21$, with equality attained.  Expanding in the weighted $u$-basis gives all forced odd-triangle zeros.  Exact rational row reduction then gives the stated pivots and support counts.
+\end{proof}
+
+The distinction between bases matters for interpreting raw nonzero counts.  The pre-row-reduction finite-field kernel vectors have $469$ nonzero entries among the $484$ weighted slots.  In the exact arithmetic good frame, $H_1$ has $463$ nonzero slots because six additional coefficients vanish incidentally, while $H_2$ has $469$; both obey the same $15$ forced odd-triangle zeros and the same $86$-slot q-pair carrier.  Their basis dependence excludes them from the support invariants.
+
+After fixing the two lexicographic pivots, only
+\[
+ 85+85-2=168
+\]
+nonpivot row entries remain.  The parity-paired frame used below changes only the basis of this fixed two-plane; it preserves the seven-band carrier.
+
+\section{Exact arithmetic-frame coefficient closure}\label{sec:exact-closure}
+
+The lexicographic q-pair frame is canonical but arithmetically unfavorable.  On the fixed $86$-slot support, the parity-paired columns
+\[
+ 231=(\mathrm{EVEN},j=15,r=5,\operatorname{wt}=40),\qquad
+ 469=(\mathrm{ODD},j=15,r=5,\operatorname{wt}=41)
+\]
+form an invertible $2\times2$ pivot block at fifteen generic split primes.  Re-row-reducing in this frame produces a complete $168$-entry rational reconstruction from the fifteen-prime CRT\@.  This modular reconstruction discovers compact characteristic-zero candidates; the theorem below validates the resulting relation independently over $\Q$.
+
+Write the published degree-$23$ equation in the $v$-coordinate as $F(t,v)=0$ and set
+\[
+ q=t^2+23,\qquad F_{\mathrm{int}}(t,v)=q^4F(t,v),\qquad u=qv.
+\]
+For the integral model $G(t,u)=0$, direct substitution gives
+\[
+ G(t,qv)=q^{19}F_{\mathrm{int}}(t,v),
+ \qquad
+ G_u(t,qv)=q^{18}(F_{\mathrm{int}})_v(t,v).
+\]
+The q-pair support lies in seven bands, with counts
+\[
+ 5,11,16,22,5,11,16,
+ \qquad 5+11+16+22+5+11+16=86.
+\]
+Equivalently, every recovered adjoint representative satisfies
+\[
+ h(t,qv)=q^{18}H(t,v),
+\]
+where
+\[
+\begin{aligned}
+H(t,v)={}&P_{18}(v)+qP_{19}(v)+q^2P_{20}(v)+q^3P_{21}(v)\\
+&+t\bigl(Q_{18}(v)+qQ_{19}(v)+q^2Q_{20}(v)\bigr),
+\end{aligned}
+\]
+with degree bounds
+\[
+(\deg P_{18},\deg P_{19},\deg P_{20},\deg P_{21})\le(4,10,15,21),
+\qquad
+(\deg Q_{18},\deg Q_{19},\deg Q_{20})\le(4,10,15).
+\]
+Thus, the common factor cancels exactly in the differential representation:
+\[
+ \frac{h\,dt}{G_u}
+ =\frac{H\,dt}{(F_{\mathrm{int}})_v}.
+\]
+Fix primitive integer polynomials $H_1,H_2\in\mathbb Z[t,v]$, each of $v$-degree $21$ and $t$-degree $6$, and define
+\[
+ z=\frac{H_1(t,v)}{H_2(t,v)}\in\Q(X).
+\]
+
+A finite-field kernel calculation then reconstructs a primitive polynomial
+\[
+ R(T,Z)=\sum_{k=0}^{23}\sum_{d=0}^{4}c_{k,d}Z^kT^d\in\mathbb Z[T,Z].
+\]
+Using $42$ primes near $10^9$, the CRT modulus has $379$ decimal digits; all $120$ normalized coefficients reconstruct, and independent reductions at $p=1000003$, $1008001$, and $1013$ agree.  Clearing denominators gives $\gcd(c_{k,d})=1$, all $120$ coefficients nonzero, and maximum coefficient size $189$ decimal digits.
+
+\begin{theorem}[Exact arithmetic-frame tetragonal equation]\label{thm:exact-arithmetic-frame}
+The polynomial $R$ satisfies
+\[
+ R(t,z)=0\quad\text{in }\Q(X),
+\]
+with exact bidegree
+\[
+ \deg_T R=4,\qquad \deg_Z R=23.
+\]
+Moreover, $z\notin\Q(t)$, hence $\Q(t,z)=\Q(X)$, and $z:X\to\PP^1$ has degree $4$.  Consequently, $R$ is the primitive characteristic-zero defining equation of the image of $(t,z)$, unique up to sign.
+\end{theorem}
+
+\begin{proof}
+Let
+\[
+ R(T,Z)=\sum_{k=0}^{23}A_k(T)Z^k,
+ \qquad \deg A_k\le4,
+\]
+and homogenize after substituting $z=h_1/h_2$:
+\[
+ S(t,u)=\sum_{k=0}^{23}A_k(t)h_1(t,u)^k h_2(t,u)^{23-k}.
+\]
+For the weights $\operatorname{wt}(t)=1$, $\operatorname{wt}(u)=2$, the integral equation $G$ is monic of $u$-degree $23$ and has weighted degree at most $46$, while each $h_i$ has weighted degree at most $42$.  Therefore,
+\[
+ \operatorname{wt}(S)\le4+23\cdot42=970.
+\]
+Division by the monic polynomial $G$ preserves this weighted-degree bound, so every coefficient of the remainder in the basis $1,u,\ldots,u^{22}$ has $t$-degree at most $970$.  Exact evaluation of the remainder at the $971$ distinct integers
+\[
+ -485,-484,\ldots,484,485
+\]
+gives zero at every value.  Each remainder coefficient is therefore the zero polynomial, proving $S\equiv0\pmod G$ and hence $R(t,z)=0$ in $\Q(X)$.
+
+At $t=0$, the coefficient vectors of $H_1(0,v)$ and $H_2(0,v)$ have a nonzero $2\times2$ minor in $v$-degrees $0$ and $1$; the resulting integer has $94$ digits and is nonzero.  Hence, $H_1$ and $H_2$ are linearly independent in $\Q(t)[v]$.  Since both have $v$-degree $21<23=\deg_v F$, equality $H_1/H_2\in\Q(t)$ in the field $\Q(t)[v]/(F)$ would force such polynomial proportionality.  Therefore, $z$ lies outside $\Q(t)$.  Since $[\Q(X):\Q(t)]=23$ is prime, the tower law gives $\Q(t,z)=\Q(X)$.  The equation $R(t,z)=0$ has $T$-degree $4$, so $[\Q(X):\Q(z)]\le4$.  The global degree-$4$ optimality argument used in Theorem~\ref{thm:tetragonal-pencil} excludes degrees $1,2,3$, hence $\deg z=4$.  Finally, $\deg_ZR=23=[\Q(X):\Q(t)]$, so $R$ is the minimal polynomial of $z$ over $\Q(t)$ after primitive normalization.
+\end{proof}
+
+\begin{theorem}[Exact transition to the symmetric frame]\label{thm:frame-transition}
+Let $w$ be the two-point normalized coordinate of \S\ref{sec:principal-parts} and let $z=H_1/H_2$ be the arithmetic coordinate above.  There is a primitive matrix
+\[
+ M=\begin{pmatrix}A&B\\ C&D\end{pmatrix}\in M_2(\mathbb Z),\qquad
+ \det M\ne0,\qquad
+ \boxed{\displaystyle w=\frac{Az+B}{Cz+D}},
+\]
+whose entries have $148,149,149,150$ decimal digits.
+Consequently,
+\[
+ R_{\rm sym}(T,W)=\operatorname{pp}\!\left((A-CW)^{23}
+ R\!\left(T,\frac{DW-B}{A-CW}\right)\right)
+\]
+is an explicit primitive defining equation in the geometrically normalized coordinate $w$, again of bidegree $(4,23)$; here $\operatorname{pp}$ denotes primitive part over $\mathbb Z$.
+\end{theorem}
+
+\begin{proof}
+Write $b_{23}=qc$ in the published integral model.  At either point above $q=0$, with $t=\alpha$, $\alpha^2=-23$, and $r=t-\alpha$, the local valuations satisfy
+\[
+ v_P(u)=19,\qquad v_P(q)=v_P(r)=23,
+\]
+and the initial equation is $u^{23}+c(\alpha)q^{19}$.  In each exact good-frame adjoint, the unique lowest principal-part contribution is the $q^9u^{10}$ term.  If
+\[
+ L_i(t)=\left(\frac{[v^{10}]H_i}{q}\right)\bmod q,
+\]
+then $G_u\sim23u^{22}$ and $\pi=u^{17}/r^{14}$ at the chosen branch.  The first surviving coefficient is therefore
+\[
+\begin{aligned}
+\operatorname{red}_P\!\left(
+ \frac{q^9u^{10}L_i(\alpha)}{G_u}\,\pi^{21}\right)
+&=\operatorname{red}_P\!\left(
+ \frac{L_i(\alpha)}{23}\,q^9u^{345}r^{-294}\right)\\
+&=-\frac{c(\alpha)^{15}}{23}L_i(\alpha)
+  \operatorname{red}_P\!\left(\frac{q}{r}\right)^{294}\\
+&=-\frac{c(\alpha)^{15}(2\alpha)^{294}}{23}\,L_i(\alpha).
+\end{aligned}
+\]
+Here, $u^{345}=(u^{23})^{15}=-c(\alpha)^{15}q^{285}$ to leading order and $q/r=t+\alpha$ reduces to $2\alpha$.  Thus, the local initial form gives the displayed constant directly.
+Reducing the two first-jet values modulo $q=t^2+23$ gives the exact $2\times2$ good-frame principal-part matrix $J_{\rm good}\in\mathrm{GL}_2(\Q)$.  The primitive integral scaling of $J_{\rm good}^{-1}$ is the displayed matrix $M$, so the unique normalized basis of Proposition~\ref{prop:principal-rank} gives the stated fractional-linear relation.
+
+\end{proof}
+
+\begin{remark}[Frame height]
+The exact arithmetic-frame relation has maximum coefficient size $189$ digits, whereas Theorem~\ref{thm:frame-transition} produces a primitive symmetric-frame table with maximum coefficient size $3292$ digits.  The transition matrix itself has entries of $148$--$150$ digits.  Thus, symmetric-frame moduli of $133$ or $136$ digits lie far below the heights of the reconstructed objects.  The frame change reduces arithmetic height while preserving the tetragonal fibration.
+\end{remark}
+
+
+
+\begin{proposition}[Six-slice uniqueness]\label{prop:six-slice-unique}
+Let $M_6$ be the exact $138\times120$ coefficient matrix obtained from the six specializations $t=0,1,2,3,4,5$ for bidegree-$(4,23)$ relations in the arithmetic frame.  Then
+\[
+\operatorname{rank}_{\Q}(M_6)=119,
+\qquad
+\dim_{\Q}\ker(M_6)=1.
+\]
+\end{proposition}
+
+\begin{proof}
+Reduction of the same exact matrix modulo $1000003$ has rank $119$, so $\operatorname{rank}_{\Q}(M_6)\ge119$.  Theorem~\ref{thm:exact-arithmetic-frame} supplies a nonzero characteristic-zero relation in the kernel, giving $\operatorname{rank}_{\Q}(M_6)\le119$.  Equality follows, and the kernel is one-dimensional.  The existence theorem uses the independent $971$-point remainder identity, so this rank computation supplies a separate uniqueness check.
+\end{proof}
+
+
+
+\section{A general ramified-adjoint ceiling law}\label{sec:general-ceiling}
+The seven-band theorem is an instance of a prime-degree valuation principle.
+
+\begin{proposition}[Ramified-adjoint ceiling law]\label{prop:general-ceiling}
+Let $t:X\to\PP^1$ have prime degree $p$, and let $P_+,P_-$ be a conjugate pair of totally ramified points above the roots of a quadratic polynomial $q(t)\in\Q[t]$.  Suppose a function $u$ satisfies
+\[
+v_P(q)=p,\qquad v_P(u)=a,\qquad \gcd(a,p)=1,
+\]
+and the local branches of a monic degree-$p$ equation $G(t,u)=0$ have initial form $u=c\pi^a+O(\pi^{a+1})$ with $c\ne0$.  Let
+\[
+\eta=\frac{h(t,u)\,dt}{G_u},\qquad h=\sum_{j=0}^{p-2}a_j(t)u^j,
+\]
+with $a_j(t)\in\Q[t]$, and assume $v_{P_\pm}(\eta)\ge\rho$.  If $m_j=\operatorname{ord}_{q}a_j$, then every nonzero coefficient satisfies
+\[
+\boxed{\displaystyle m_j\ge\left\lceil\frac{(p-1)(a-1)+\rho-aj}{p}\right\rceil.}
+\]
+\end{proposition}
+
+\begin{proof}
+Total ramification gives $v_P(dt)=p-1$.  The $p-1$ differences between the chosen local branch of $u$ and the conjugate branches each have valuation $a$, because $\gcd(a,p)=1$; hence $v_P(G_u)=(p-1)a$.  Thus,
+\[
+v_P(h)\ge \rho-(p-1)+(p-1)a=(p-1)(a-1)+\rho.
+\]
+The conjugate pair forces the same vanishing order at both roots of $q$, so $v_P(a_j(t)u^j)=pm_j+aj$.  For $0\le j\le p-2$, these term valuations are distinct: equality implies $p\mid a(j-j')$, hence $j=j'$.  The valuation of the sum equals the minimum term valuation, and each nonzero term satisfies the displayed ceiling.
+\end{proof}
+
+\begin{corollary}[Support-polygon form]\label{cor:support-polygon}
+Assume in addition that $\deg_t a_j\le N-2j$, and write uniquely
+\[
+ a_j(t)=\sum_{\ell\ge0}\bigl(e_{j,\ell}+t\,o_{j,\ell}\bigr)q(t)^\ell.
+\]
+Put $C=(p-1)(a-1)+\rho$.  A nonzero even slot $e_{j,\ell}$ must satisfy
+\[
+ \ell\ge\left\lceil\frac{C-aj}{p}\right\rceil,
+ \qquad 2\ell+2j\le N,
+\]
+and a nonzero odd slot $o_{j,\ell}$ must satisfy the same lower bound together with
+$2\ell+1+2j\le N$.  Thus, the adjoint support lies in the finite lattice polygon cut out by the valuation half-plane and the weighted-degree half-plane.
+\end{corollary}
+
+\begin{proof}
+The ceiling law gives the lower bound on every $q$-digit.  The even monomial $q^\ell u^j$ has weighted degree $2\ell+2j$, while $tq^\ell u^j$ has weighted degree $2\ell+1+2j$.  The asserted inequalities follow.
+\end{proof}
+
+For the $M_{23}$ quotient, $(p,a,\rho,N)=(23,19,1,42)$ gives
+\[
+(p-1)(a-1)+\rho=22\cdot18+1=397,
+\]
+recovering Proposition~\ref{prop:seven-band}.  Corollary~\ref{cor:support-polygon} produces the seven bands and the forbidden odd triangle directly from the two bounding half-planes.
+\section{Computational certificates and logical roles}\label{sec:certificates}
+The mathematical arguments above use computation in four distinct roles.  A \emph{proof-bearing} certificate verifies an explicit finite calculation used in the cited result.  A \emph{corroborative} certificate checks an already proved statement through an independent representation, specialization, or fresh prime.  A \emph{discovery} calculation produces candidates that are later accepted by an independent characteristic-zero proof.  A \emph{diagnostic} calculation records a bounded search or explains a reconstruction threshold without entering any theorem.  No modular reconstruction alone is used to assert a characteristic-zero identity.
+
+\begingroup
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.14}
+\begin{longtable}{@{}>{\raggedright\arraybackslash}p{0.055\textwidth}>{\raggedright\arraybackslash}p{0.285\textwidth}>{\raggedright\arraybackslash}p{0.59\textwidth}@{}}
+\toprule
+ID & Applies to & Logical role \\
+\midrule
+\endfirsthead
+\toprule
+ID & Applies to & Logical role \\
+\midrule
+\endhead
+C1 & Lemma~\ref{lem:p31-model}; Proposition~\ref{prop:principal-rank} & Proof-bearing local inputs: vertical separability, tame indices, relative parameters, special-fiber dimensions, and the nonzero first-jet determinant. \\
+C2 & Section~\ref{sec:modular}; arithmetic-frame candidate construction & Discovery and finite-field validation: $21$ CRT tables, the independent $p=1013$ table, denominator tests, and the fifteen-prime q-pair lift.  These data do not prove the characteristic-zero equation. \\
+C3 & Proposition~\ref{prop:seven-band}; Corollary~\ref{cor:seven-band-exact} & Proof-bearing finite lattice enumeration and exact verification of the ceiling, weighted degrees, forced odd triangle, pivots, and support counts. \\
+C4 & Theorem~\ref{thm:exact-arithmetic-frame}; Proposition~\ref{prop:six-slice-unique} & Proof-bearing characteristic-zero identity: the degree-$970$ remainder bound and $971$ exact zeros.  The six-slice rank computation is an independent uniqueness check. \\
+C5 & Proposition~\ref{prop:wt-law}; Theorem~\ref{thm:frame-transition} & Proof-bearing exact first-jet calculation and frame matrix.  Coefficientwise reductions and the recovered $p=1013$ inverse map are corroborative. \\
+C6 & Proposition~\ref{prop:wt-law}; Theorem~\ref{thm:bidegree} & Corroborative only: all $22$ finite-field tables have bidegree $(4,23)$ and the prescribed ramified fibers; the clean tables give the recorded $T=0$ factorization and quartic-discriminant profile. \\
+C7 & Theorems~\ref{thm:exact-arithmetic-frame} and~\ref{thm:frame-transition} & Adversarial corroboration only: two unused split primes give $12/12$ end-to-end checks, and three out-of-window values at three fresh primes give $9/9$ zero remainders. \\
+C8 & Proposition~\ref{prop:translate-global}; Theorem~\ref{thm:sl2-height-global}; Lemma~\ref{lem:pgl2-det-cutoff}; Theorem~\ref{thm:pgl2-height-global} & Proof-bearing exact Rouch\'e, interval, Sturm, determinant/content, and finite enumeration calculations for the full rational fractional-linear orbit. \\
+C9 & Height-search context for Appendix~\ref{app:height} & Diagnostic only: a bounded search over $37{,}296$ matrices and independent modular factorization checks.  No global theorem depends on this bounded search. \\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\paragraph{Archive locations.}
+\begingroup
+\small
+\begin{description}[style=multiline,leftmargin=2.8em,labelwidth=2.2em,itemsep=.25em,parsep=0pt,topsep=.25em]
+\item[C1] \path{certificates/good_reduction_p31/}; \path{certificates/publication/p31_checks/}; \path{certificates/publication/regression_p31/}.
+\item[C2] \path{certificates/current_21prime/}; \path{certificates/heldout_p1013/}; \path{certificates/common_denominator_133/}; \path{certificates/qpair_goodframe_v93/}.
+\item[C3] \path{certificates/publication/band_law/}; \path{certificates/publication/exact_closure/}.
+\item[C4] \path{certificates/exact_tetragonal_v93/}; \path{certificates/publication/exact_tetragonal/}.
+\item[C5] \path{certificates/publication/frame_transition/}; \path{certificates/frame_transition_v95/}; \path{certificates/publication/exact_tetragonal/verify_compactified_fibers_parallel.py}.
+\item[C6] \path{certificates/publication/ramification/}.
+\item[C7] \path{certificates/publication/virgin_prime_spotcheck/}; \path{certificates/publication/out_of_window_spotcheck/}.
+\item[C8] \path{certificates/global_height_minimality/}; \path{certificates/global_fractional_linear_height/}.
+\item[C9] \path{certificates/lower_height_specialization/}.
+\end{description}
+\endgroup
+
+The principal corroborating outputs are as follows.  The ramification audit verifies the bidegree and the two totally ramified fibers at all $22$ finite-field primes; it records the additional small-prime collision at $p=31$ separately.  The exact frame transition matches all $120$ coefficients projectively at all $22$ primes.  At $p=1013$, the inverse map is
+\[
+ z=\frac{546w+938}{283w+1},
+\]
+with projective ratio $732$, and the compactified degree-$23$ fiber comparison agrees at all $1013$ base values.  These checks corroborate, rather than replace, the characteristic-zero proofs.
+
+\section{Reproducibility and archive integrity}
+The accompanying archive contains the article source, exact adjoints, arithmetic and symmetric coefficient tables, finite-field tables, characteristic-zero validators, and execution logs.  The principal commands are
+\begin{verbatim}
+./RUN_FAST_CERTIFICATES.sh
+./RUN_EXACT_TETRAGONAL.sh
+./RUN_GLOBAL_HEIGHT_MINIMALITY.sh
+./RUN_BOUNDED_HEIGHT_SEARCH.sh
+./RUN_ALL_CERTIFICATES.sh
+./VERIFY_CHECKSUMS.sh
+\end{verbatim}
+The first three runners execute the structural, exact-identity, frame-transition, and global-height proofs.  The fast runner uses isolated worker processes and accepts an override through \path{M23_FAST_WORKERS}.  The exact runner accepts independent overrides through \path{M23_IDENTITY_WORKERS} and \path{M23_FIBER_WORKERS}.  The bounded-height runner is diagnostic, as recorded in C9, and the all-suite runner executes the four suites in sequence.  The checksum command verifies every payload file and exact manifest membership.  \path{CERTIFICATE_INDEX.md} gives the exact inputs, expected success markers, and output files for each certificate family.
+\section{Conclusion}
+The tetragonal pencil on the HJLPPZ genus-$4$ quotient has two exact arithmetic descriptions.  The symmetric principal-part coordinate $w$ satisfies $w(P)t(P)=1$ at the conjugate totally ramified points.  The parity-adapted coordinate $z$ admits a compact primitive $120$-term relation $R(T,Z)$ of bidegree $(4,23)$, proved directly in characteristic zero by the degree-$970$ remainder bound and $971$ exact evaluations.  The prime-degree field argument gives $\Q(t,z)=\Q(X)$ and $\deg z=4$.
+
+The support structure follows from geometry.  The weighted adjoint lattice has $484$ slots, the valuation ceiling forces the $q^{18}$ factor and a $15$-slot odd triangle, and the seven bands contain $86$ slots.  The exact adjoints attain the ceiling, so the bound is sharp.  Proposition~\ref{prop:general-ceiling} and Corollary~\ref{cor:support-polygon} identify the same mechanism and support polygon for prime-degree covers with coprime local exponents.
+
+The exact matrix in $\mathrm{PGL}_2(\Q)$ identifies $z$ with $w$.  Its reductions reproduce all $120$ coefficients at all $22$ finite-field primes, while the independent $p=1013$ compactified-fiber comparison agrees at all $1013$ base values.  The arithmetic-frame height of $189$ digits and symmetric-frame height of $3292$ digits quantify the reconstruction threshold and complete coefficient closure in both frames.
+\appendix
+\section{Global fractional-linear height minimality for HJLPPZ Example~3.7}\label{app:height}
+Huang et al.\ obtain degree-$23$ specializations and then use the PARI/GP routines \texttt{polredabs} and \texttt{polredbest} to seek smaller defining equations \cite[Example~3.7]{HJLPPZ2026}; see also \cite{CohenDiaz1991,PARI2025}.  Let $f$ be their Example~3.7 polynomial.  The invertible generator change
+\[
+  \beta=\alpha-1,\qquad g(x)=f(x+1),
+\]
+produces the same degree-$23$ field and the same splitting field.  The resulting polynomial is
+\[
+\begin{aligned}
+g(x)={}&x^{23}+23x^{22}+299x^{21}+2139x^{20}+8234x^{19}-8510x^{18}\\
+&-280094x^{17}-1592842x^{16}-3657782x^{15}+3526406x^{14}\\
+&+44362906x^{13}+63064206x^{12}-221821982x^{11}-727073654x^{10}\\
+&+229352458x^9+1938799398x^8-1207282236x^7-435568756x^6\\
+&+1165914252x^5+727883760x^4-482357150x^3-983586582x^2\\
+&+60455178x+242325562.
+\end{aligned}
+\]
+For ordinary height $H(h)=\max_i|a_i|$,
+\[
+ H(f)=67{,}357{,}061{,}907,\qquad H(g)=1{,}938{,}799{,}398=:B,
+\]
+a reduction by the factor
+\[
+  \frac{H(f)}{H(g)}=34.741635455676\ldots.
+\]
+
+\begin{proposition}[Global translate minimum]\label{prop:translate-global}
+Among all integral translates $f(x+k)$ with $k\in\mathbb Z$, the polynomial $g(x)=f(x+1)$ uniquely minimizes ordinary coefficient height.
+\end{proposition}
+
+\begin{proof}
+The coefficient of $x^{20}$ in $f(x+k)$ is
+\[
+ C_3(k)=1771k^3+966k-598.
+\]
+Its derivative $C_3'(k)=5313k^2+966$ is positive on $\mathbb R$.  Exact evaluation gives $C_3(104)>B$ and $C_3(-104)<-B$; hence, $|k|\ge104$ forces $H(f(x+k))>B$.  An exact sweep of the $209$ integers $-104\le k\le104$ gives minimum $B$ uniquely at $k=1$.
+\end{proof}
+
+For the unimodular statement, homogenize
+\[
+ \Phi(X,Y)=Y^{23}f(X/Y),\qquad
+ \Gamma(X,Y)=Y^{23}g(X/Y)=\Phi(X+Y,Y),
+\]
+and write $H_\infty$ for the maximum absolute coefficient of a binary form.
+
+\begin{theorem}[Global unimodular height minimum]\label{thm:sl2-height-global}
+For every $M\in\mathrm{GL}_2(\mathbb Z)$ with $|\det M|=1$,
+\[
+ H_\infty(\Phi\mathbin{\cdot}M)\ge B.
+\]
+Modulo multiplication by $-1$, equality consists exactly of the four forms generated from $\Gamma$ by $X\mapsto-X$ and $X\leftrightarrow Y$.  In particular, $g$ is globally height-minimal under all integral unimodular fractional-linear generator changes.
+\end{theorem}
+
+\begin{proof}
+The proof uses the maximum-norm reduction bound of Hutz--Stoll \cite[Theorem~4.7 and Remark~4.9]{HutzStoll2019}, followed by exact finite enumeration.  Choose $23$ pairwise disjoint rational Rouch\'e disks of radius $10^{-10}$ around rational approximations to the roots of $g$.  Exact Taylor inequalities prove that each disk contains one root.  Since the $23$ disks are disjoint and account for all roots of the degree-$23$ form, $\Gamma$ is squarefree, as required by the Hutz--Stoll bound.  The same disks imply
+\[
+ |\alpha_i|<9,\qquad |\alpha_i-\alpha_j|>\frac1{10}\quad(i\ne j).
+\]
+For the Julia covariant point $z(\Gamma)=t+ui$, put
+\[
+ D_i=(t-\Re\alpha_i)^2+(\Im\alpha_i)^2+u^2.
+\]
+The two components of the gradient of $\log R(\Gamma,t+ui)$ are
+\[
+ \sum_i\frac{2(t-\Re\alpha_i)}{D_i},\qquad
+ \sum_i\frac{2u}{D_i}-\frac{23}{u}.
+\]
+Exact rational interval arithmetic on the four sides of the rectangle $[-1,0]\times[2,3]$ gives the strict sign pattern inward on opposite sides.  Poincar\'e--Miranda, together with uniqueness of the Julia covariant point, therefore gives
+\[
+ -1<t<0,\qquad 2<u<3.
+\]
+
+The root separation yields a coarse invariant lower bound without numerical approximation.  For every point of the upper half-space, at most one root lies within $1/20$ of the horizontal coordinate of the point.  Thus, $R(\Gamma,z)\ge u^{23}$ and $R(\Gamma,z)\ge400^{-22}u^{-21}$; the maximum of these two lower bounds is minimized at $u=1/20$.  Hence,
+\[
+ \theta(\Gamma)>20^{-23}.
+\]
+After carrying $z(\Gamma)$ to $i$, the corresponding unit-sphere root directions satisfy
+\[
+ \eta
+ =1-\max_{i\ne j}\sqrt{\frac{1+\langle\phi_i,\phi_j\rangle}{2}}
+ >\frac1{594050}.
+\]
+Indeed, the half-angle sine satisfies
+\[
+ \sin^2\!\frac{\angle(\phi_i,\phi_j)}2
+ =\frac{|\alpha_i-\alpha_j|^2u^2}
+ {(u^2+|\alpha_i-t|^2)(u^2+|\alpha_j-t|^2)}
+ >\frac{1}{297025},
+\]
+and $1-\cos(\vartheta/2)\ge\frac12\sin^2(\vartheta/2)$.  Proposition~4.3 of \cite{HutzStoll2019} therefore permits
+\[
+ \varepsilon(\Gamma)>\frac{1}{2\cdot594050^{22}}.
+\]
+With $n=23$ and $H_\infty(\Gamma)=B$, Remark~4.9 of \cite{HutzStoll2019} combines Theorem~4.7 with $\|F\|\le(n+1)H_\infty(F)^2=24H_\infty(F)^2$.  Consequently, every $\gamma\in\mathrm{SL}_2(\mathbb Z)$ with $H_\infty(\Gamma\mathbin{\cdot}\gamma)\le B$ satisfies
+\[
+ \cosh d\bigl(\gamma^{-1}z(\Gamma),i\bigr)<600{,}000{,}000,
+\]
+because the exact integer inequality
+\[
+ (600{,}000{,}000)^{21}>
+ 2^{23}\cdot24B^2\cdot594050^{22}\cdot20^{23}
+\]
+holds.  If $\gamma=\begin{psmallmatrix}a&b\\c&d\end{psmallmatrix}$, then
+\[
+ \cosh d(\gamma^{-1}z,i)
+ =\frac{|dz-b|^2+|a-cz|^2}{2u}
+ \ge c^2+d^2,
+\]
+since $u>2$.  Hence, $|c|,|d|\le24494$.
+
+Finally, put $T=\begin{psmallmatrix}1&1\\0&1\end{psmallmatrix}$.  Since $\Gamma=\Phi\mathbin{\cdot}T$, every determinant-$1$ transform is $\Phi\mathbin{\cdot}(T\gamma)$, and $T\gamma$ has the same bottom row as $\gamma$.  Because a unimodular integral substitution preserves coefficient content, any transform of height at most $B$ must have both column values bounded by $B$.  Exact Sturm isolation of the seven real roots and six real critical points of $f$, followed by exact integer evaluation of the resulting Thue columns through denominator $24494$, leaves, up to simultaneous sign, only
+\[
+ (1,0),\quad(0,1),\quad(1,1),\quad(2,1).
+\]
+All $40$ signed column pairs of determinant $\pm1$ are then substituted exactly.  None has height below $B$; the equality set gives precisely the four forms stated above.  A determinant-$-1$ substitution differs from a determinant-$1$ substitution by a coordinate reflection, which preserves height.
+\end{proof}
+
+The rational root centers used to locate the disks are discovery inputs only; the Rouch\'e inequalities validate every retained disk exactly.
+
+Every rational fractional-linear change has a primitive integral matrix representative, unique up to sign, and the primitive part of the transformed binary form is the corresponding primitive degree-$23$ defining polynomial.
+
+\begin{lemma}[Determinant cutoff]\label{lem:pgl2-det-cutoff}
+Let $M\in M_2(\mathbb Z)$ be primitive, meaning that the gcd of the four entries of $M$ is $1$, with $D=|\det M|>0$.  Let $C$ be the coefficient content of $\Phi\mathbin{\cdot}M$, and put
+\[
+ H_M=\operatorname{pp}(\Phi\mathbin{\cdot}M).
+\]
+Here $\operatorname{pp}$ denotes primitive part.  If $H_\infty(H_M)\le B$, then $D\in\{1,2\}$.
+\end{lemma}
+
+\begin{proof}
+First, control the local content.  If $p\nmid D$, reduction of $M$ modulo $p$ is invertible, so the primitive form $\Phi$ cannot become the zero form; hence, $p\nmid C$.  Suppose $p^e\Vert D$.  Smith reduction over $\mathbb Z_p$ gives
+\[
+ M=U\begin{pmatrix}1&0\\0&p^e\end{pmatrix}V,
+ \qquad U,V\in\mathrm{GL}_2(\mathbb Z_p).
+\]
+The right factor preserves coefficient content.  Write $\Phi\mathbin{\cdot}U=\sum_{j=0}^{23}A_jX^{23-j}Y^j$.  If the first column of $U$ reduces to a projective root of multiplicity $m$ of $\Phi$ modulo $p$, then $A_0,\ldots,A_{m-1}$ are divisible by $p$ and $A_m$ is a $p$-adic unit.  The diagonal substitution multiplies the $j$th coefficient by $p^{ej}$, so the coefficient $A_mp^{em}$ shows directly that $v_p(C)\le me$.
+
+For $p\ne2,23$, one has $m\le2$.  Indeed, a projective root of multiplicity at least $3$ would be a common root of $f,f',f''$ modulo $p$, while exact resultants give
+\[
+ \gcd\!\left(|\operatorname{Disc}(f)|,|\operatorname{Res}(f,f'')|\right)
+ =2^{44}23^{23}.
+\]
+At $p=2$, direct reduction gives $f(r)\equiv2\pmod4$ for each residue class $r\pmod4$.  Thus, a finite projective point contributes valuation exactly $1$ when it reduces to a root, while the point at infinity is not a root because $f$ is monic; hence, $v_2(C)\le1$.  At $p=23$,
+\[
+ f(x)\equiv x^{23}-1=(x-1)^{23}\pmod{23},
+\]
+and exact evaluation gives $f(1)\equiv184=23\cdot8\pmod{23^2}$ and $f'(1)\equiv0\pmod{23}$.  For $r=1+23a$, Taylor expansion gives $f(r)\equiv f(1)\pmod{23^2}$ because $23\mid f'(1)$; hence, every $23$-adic point in the unique root class has value of exact valuation $1$, and $v_{23}(C)\le1$.
+
+Put
+\[
+ q=\frac{D^{23}}{C^2}.
+\]
+The preceding local estimates show that every $p$-adic valuation of $q$ is nonnegative, so $q$ is a positive integer.  Binary discriminants transform by
+\[
+ |\operatorname{Disc}(H_M)|
+ =|\operatorname{Disc}(\Phi)|q^{22}.
+\]
+Since $f$ is irreducible of degree $23$, it has no rational projective root; hence, $h(x)=H_M(x,1)$ has degree $23$ and nonzero integral leading coefficient.  If $H_\infty(H_M)\le B$, Hadamard's inequality on the Sylvester matrix of $h$ and $h'$ gives
+\[
+ |\operatorname{Disc}(h)|^2
+ \le (24B^2)^{22}
+ \left(\frac{23\cdot24\cdot47}{6}B^2\right)^{23}.
+\]
+Exact integer extraction then yields
+\[
+ q\le76{,}032{,}571.
+\]
+For a prime $p\ne2,23$ dividing $D$, the content estimate gives $v_p(q)\ge19e$, but $3^{19}>76{,}032{,}571$.  Thus, no such prime occurs.  If $23\mid D$, then $v_{23}(q)\ge21$ and $23^{21}$ exceeds the same bound.  Finally, if $4\mid D$, then $v_2(q)\ge44$ and $2^{44}$ also exceeds the bound.  Hence, $D\in\{1,2\}$.
+\end{proof}
+
+\begin{theorem}[Global rational fractional-linear height minimum]\label{thm:pgl2-height-global}
+For every primitive integral matrix $M$ with $\det M\ne0$,
+\[
+ H_\infty\!\left(\operatorname{pp}(\Phi\mathbin{\cdot}M)\right)\ge B.
+\]
+Equivalently, $g$ has minimum ordinary coefficient height over the full $\mathrm{PGL}_2(\mathbb Q)$ fractional-linear orbit of the generator of $f$.  Modulo multiplication by $-1$, equality consists exactly of the four forms generated from $\Gamma$ by $X\mapsto-X$ and $X\leftrightarrow Y$.
+\end{theorem}
+
+\begin{proof}
+Lemma~\ref{lem:pgl2-det-cutoff} leaves $D=1$ and $D=2$.  Theorem~\ref{thm:sl2-height-global} handles $D=1$.
+
+Assume $D=2$.  With $T=\begin{psmallmatrix}1&1\\0&1\end{psmallmatrix}$, write $\Gamma=\Phi\mathbin{\cdot}T$ and $N=T^{-1}M$; the bottom row is unchanged.  A coordinate reflection reduces determinant $-2$ to determinant $2$ without changing coefficient height, so
+\[
+ \gamma=\frac{1}{\sqrt2}N\in\mathrm{SL}_2(\mathbb R).
+\]
+The local content bound above gives $C\le2$.  Therefore, if $H_\infty(H_M)\le B$,
+\[
+ H_\infty(\Gamma\mathbin{\cdot}\gamma)
+ =2^{-23/2}C H_\infty(H_M)<B.
+\]
+The Hutz--Stoll bound used in Theorem~\ref{thm:sl2-height-global} applies to every element of $\mathrm{SL}_2(\mathbb R)$ \cite[Theorem~4.7]{HutzStoll2019}, so
+\[
+ \cosh d\bigl(\gamma^{-1}z(\Gamma),i\bigr)<600{,}000{,}000.
+\]
+Since the Julia point above has imaginary part $u>2$, the bottom row $(c,d)$ of $M$ satisfies
+\[
+ c^2+d^2<1{,}200{,}000{,}000,
+ \qquad |c|,|d|\le34641.
+\]
+Moreover, every raw leading or trailing coefficient of $\Phi\mathbin{\cdot}M$ has absolute value at most $2B$.  Exact Sturm isolation of the seven real roots and six real critical points of $f$, together with the root neighborhoods constructed in Theorem~\ref{thm:sl2-height-global}, reduces every possible column, with the sign normalized by a nonnegative lower entry, to
+\[
+ (-2,0),\ (-1,0),\ (0,1),\ (1,0),\ (1,1),\ (2,0),\ (2,1).
+\]
+Allowing independent signs on the two columns, exactly $32$ primitive ordered column pairs of determinant $\pm2$ arise from these classes.  Exact substitution and primitive-part normalization give the minimum height
+\[
+ 372{,}261{,}710{,}848>B.
+\]
+Thus, determinant $2$ produces neither an improvement nor an equality case.  The equality classification is therefore exactly the unimodular classification in Theorem~\ref{thm:sl2-height-global}.
+\end{proof}
+
+Theorem~\ref{thm:pgl2-height-global} closes the full rational fractional-linear orbit.  Global minimum height among all defining polynomials arising from arbitrary primitive field generators remains outside the present claim.
+\section*{Acknowledgments}
+Thanks to Xiaoyu Huang, Blake Jackson, Kyu-Hwan Lee, Bjorn Poonen, Rachel Pries, and Shaowu Zhang for their encouragement to publish and for making their construction and computational data available for independent corroboration and consistency checks.  Magma, SageMath, GAP, PARI/GP, and Python/SymPy supported exploration, independent cross-checking, exact arithmetic, and certificate generation.  OpenAI ChatGPT and Anthropic Claude assisted with code generation, testing, error checking, and manuscript revision.  Each computational claim is supported by an executable or independently checkable certificate.
+\begin{thebibliography}{99}
+\small
+\setlength{\itemsep}{0.18em}
+\bibitem{HJLPPZ2026}
+X.~Huang, B.~Jackson, K.-H.~Lee, B.~Poonen, R.~Pries, and S.~Zhang,
+\emph{The Mathieu group $M_{23}$ is a Galois group over $\Q$},
+arXiv:2608.08538v1, August 9, 2026.
+
+\bibitem{BrombergBromberg2026}
+S.~H.~Bromberg and A.~X.~Bromberg,
+\emph{Galois Covers of $M_{23}$ over $\Q$: A Positive-Dimensional Approach---Braid-Orbit Reconstruction, Exact Clutching, Algebraic Collision Tails, and Six-Branch Refinements},
+Zenodo, 2026, DOI: \href{https://doi.org/10.5281/zenodo.22010546}{10.5281/zenodo.22010546}.
+
+\bibitem{Hartshorne1977}
+R.~Hartshorne,
+\emph{Algebraic Geometry},
+Graduate Texts in Mathematics 52, Springer, 1977.
+
+\bibitem{StacksProject}
+The Stacks Project Authors,
+\emph{The Stacks Project},
+Tags 0BMB (purity of branch locus) and 0EYG (Abhyankar's lemma for a regular divisor),
+\url{https://stacks.math.columbia.edu/}.
+
+
+\bibitem{CohenDiaz1991}
+H.~Cohen and F.~Diaz y Diaz,
+\emph{A polynomial reduction algorithm},
+S\'eminaire de Th\'eorie des Nombres de Bordeaux, S\'erie 2, 3 (1991), 351--360.
+
+\bibitem{HutzStoll2019}
+B.~Hutz and M.~Stoll,
+\emph{Smallest representatives of $\mathrm{SL}(2,\mathbb Z)$-orbits of binary forms and endomorphisms of $\mathbb P^1$},
+Acta Arith. 189 (2019), 283--308, DOI: 10.4064/aa180618-9-12.
+
+\bibitem{PARI2025}
+The PARI Group,
+\emph{PARI/GP version 2.17.3},
+2025.
+\end{thebibliography}
+\end{document}

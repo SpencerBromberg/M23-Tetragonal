@@ -1,0 +1,5 @@
+bound=8
+degree-23 transforms checked=37296
+best all: score=(1938799398, 171, 8538924410) matrix=(1, -1, 0, 1) leading=1
+best monic: score=(1938799398, 171, 8538924410) matrix=(1, -1, 0, 1)
+PGL2 SEARCH CERTIFICATE: PASS

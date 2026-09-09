@@ -1,0 +1,4 @@
+V1: ceil((397-19j)/23) = certified band minimum r_min(j) for all j = 0..21 (caps 4, 10, 15, 21 reproduced): PASS
+V2: for j >= 16, minimal digit 21-j exceeds the top odd digit 20-j: forbidden odd triangle forced: PASS
+V3: exact adjoints satisfy ord_q(a_j) >= ceil((397-19j)/23) for all j, with equality attained: PASS
+M23_BAND_LAW_NUMERIC_PASS

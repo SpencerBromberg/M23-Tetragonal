@@ -1,0 +1,13 @@
+M23_VIRGIN_PRIME_SPOTCHECK_BEGIN
+PRIME 1511: sqrt(-23) roots = [540, 971]
+  t=540: arithmetic 23rd-power PASS; PGL2 wt=1 PASS; symmetric root=305 PASS
+  t=971: arithmetic 23rd-power PASS; PGL2 wt=1 PASS; symmetric root=1206 PASS
+PRIME 1531: sqrt(-23) roots = [399, 1132]
+  t=399: arithmetic 23rd-power PASS; PGL2 wt=1 PASS; symmetric root=848 PASS
+  t=1132: arithmetic 23rd-power PASS; PGL2 wt=1 PASS; symmetric root=683 PASS
+VIRGIN_PIPELINE_PRIMES = 1511 1531
+TOTAL_SUBCHECKS = 12
+ARITHMETIC_FIBER_23RD_POWER_ALL = true
+PGL2_TWO_POINT_NORMALIZATION_ALL = true
+SYMMETRIC_FIBER_23RD_POWER_ALL = true
+M23_VIRGIN_PRIME_SPOTCHECK_PASS

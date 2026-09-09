@@ -1,0 +1,5 @@
+L1: 484 slots = 253 even + 231 odd: PASS
+L2: forbidden odd triangle {k odd, j>=16}: 15 slots, staircase (33,1)(35,2)(37,3)(39,4)(41,5): PASS  [pure lattice geometry]
+L3: q-pair space 469 = 253 + 216; law r>=18-j allows 130: PASS
+L4: seven-band law: 86 slots, counts (5,11,16,22|5,11,16), all within r>=18-j: PASS
+M23_PATCH_CERT1_PASS
